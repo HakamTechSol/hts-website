@@ -8,10 +8,11 @@ import servicesHeroBackground from "@/assets/services-hero-background.jpg";
 import { ServiceIllustration, ServiceIllustrationType } from "@/components/ServiceIllustration";
 
 const services: { illustration: ServiceIllustrationType; title: string; subtitle: string; features: string[] }[] = [
-  { illustration: "mobile", title: "Mobile App Development", subtitle: "Native iOS, Android & cross-platform applications", features: ["iOS & Android engineering", "Flutter & React Native", "Push notifications and offline sync"] },
-  { illustration: "software", title: "Custom Software Development", subtitle: "ERP, CRM and workflow software built around your business", features: ["ERP & CRM platforms", "Role-based access control", "Reports and integrations"] },
-  { illustration: "web", title: "Web Development & Portals", subtitle: "Modern client portals, web apps and commerce experiences", features: ["React & Node.js applications", "E-commerce and payments", "SEO-ready responsive platforms"] },
   { illustration: "ai", title: "AI & Automations", subtitle: "AI-enabled workflows, intelligent assistants and data insights", features: ["Custom AI agents", "NLP and analytics", "Automated business workflows"] },
+  { illustration: "mobile", title: "Mobile App Development", subtitle: "Native iOS, Android & cross-platform applications", features: ["iOS & Android engineering", "Flutter & React Native", "Push notifications and offline sync"] },
+  { illustration: "software", title: "Custom Software Development", subtitle: "Tailored ERP, CRM, and custom software for enterprise workflows", features: ["ERP & CRM platforms", "Business-specific workflows", "Reports and integrations"] },
+  { illustration: "web", title: "Web Development & Portals", subtitle: "Modern client portals, web apps and commerce experiences", features: ["React & Node.js applications", "E-commerce and payments", "SEO-ready responsive platforms"] },
+  { illustration: "cms", title: "CMS Development", subtitle: "Flexible and scalable CMS solutions for easy content management and business growth.", features: ["Custom content workflows", "Scalable publishing tools", "Easy administration"] },
   { illustration: "design", title: "Graphic Designing", subtitle: "Visual identity and product design that makes your brand memorable", features: ["Brand identity systems", "Product UI/UX design", "Campaign-ready creative assets"] },
   { illustration: "marketing", title: "Social Media Marketing", subtitle: "Content and performance campaigns designed for measurable growth", features: ["Social content strategy", "Paid campaign management", "Audience and performance reporting"] },
   { illustration: "cloud", title: "Cloud Infrastructure & DevOps", subtitle: "Reliable cloud delivery, monitoring and scalable deployments", features: ["Cloud migration and setup", "CI/CD delivery pipelines", "Monitoring and disaster recovery"] },

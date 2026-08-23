@@ -25,12 +25,12 @@ const Quote = () => {
       <div className="min-h-screen bg-slate-50 text-slate-800">
         <Navbar />
 
-        <main className="relative overflow-hidden bg-gradient-to-br from-[#0f6cbd] via-sky-600 to-blue-800 px-4 pb-20 pt-28 sm:px-6 md:pt-36 lg:px-8 lg:pb-28">
-          <div className="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-sky-300/20 blur-3xl" />
+        <main className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-100 px-4 pb-14 pt-24 sm:px-6 sm:pb-20 md:pt-36 lg:px-8 lg:pb-28">
+          <div className="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-sky-200/50 blur-3xl" />
+          <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl" />
 
           <div className="container relative z-10 mx-auto max-w-6xl">
-            <div className="grid gap-10 rounded-[32px] border border-white/40 bg-white p-6 shadow-[0_30px_90px_rgba(0,0,0,0.25)] sm:p-10 lg:grid-cols-12 lg:gap-14 lg:p-14">
+            <div className="grid gap-8 rounded-[32px] border border-sky-100 bg-white/95 p-5 shadow-[0_24px_70px_rgba(15,108,189,0.16)] sm:p-10 lg:grid-cols-12 lg:gap-14 lg:p-14">
               <section className="space-y-7 lg:col-span-5">
                 <div className="space-y-3">
                   <span className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#0f6cbd]">
@@ -96,6 +96,7 @@ const Quote = () => {
                           <option>Mobile App Development</option>
                           <option>Custom Software Development</option>
                           <option>Web Development & Portals</option>
+                          <option>CMS Development</option>
                           <option>AI & Automations</option>
                           <option>Graphic Designing</option>
                           <option>Social Media Marketing</option>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { ChevronDown, Menu, X, ArrowRight, Car, Cross, Clock3, GraduationCap, ShoppingCart, Building2, Landmark, Truck, Trophy } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight, Car, Cross, Clock3, GraduationCap, ShoppingCart, Building2, Landmark, Truck, Trophy, Plane, Clapperboard, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import builtToWinImage from "@/assets/built-to-win-phones-transparent.png";
@@ -14,7 +14,11 @@ const servicesMegaMenu = [
   },
   {
     category: "Custom Software Development",
-    items: ["ERP Solution", "CRM Solution", "CMS Solution"],
+    items: ["ERP Solution", "CRM Solution", "Business Workflow Software"],
+  },
+  {
+    category: "CMS Development",
+    items: ["Custom CMS Solutions", "Content Workflows", "CMS Migration"],
   },
   {
     category: "Web Development",
@@ -56,13 +60,17 @@ const industriesMegaMenu = [
   { title: "On-Demand", desc: "Elevating on-demand services with innovative tech.", icon: Clock3 },
   { title: "Fintech", desc: "Empowering fintech with specialized tech services.", icon: Landmark },
   { title: "Logistics", desc: "Optimizing logistics with intelligent tech.", icon: Truck },
+  { title: "Travel & Hospitality", desc: "Creating connected experiences for travel and hospitality businesses.", icon: Plane },
+  { title: "Media & Entertainment", desc: "Building engaging digital platforms for media and entertainment.", icon: Clapperboard },
+  { title: "Manufacturing", desc: "Streamlining operations with practical manufacturing technology.", icon: Factory },
 ];
 
 const technologiesMegaMenu = [
-  { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "React.js"] },
-  { category: "Backend", items: ["Node.js", "Python", "Laravel", "PHP", ".NET", "C#"] },
-  { category: "Mobile", items: ["React Native", "Flutter", "Dart", "Android", "iOS"] },
-  { category: "Commerce & CMS", items: ["WordPress", "Shopify"] },
+  { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "React.js", "TypeScript", "Next.js", "Vue.js", "Angular", "Svelte", "SolidJS", "Tailwind CSS", "Bootstrap", "Vite", "Sass"] },
+  { category: "Backend", items: ["Node.js", "Python", "Laravel", "PHP", ".NET", "C#", "Java", "Go", "Ruby", "Express.js", "NestJS", "Django", "Spring Boot", "FastAPI", "Firebase"] },
+  { category: "Mobile Development", items: ["React Native", "Flutter", "Dart", "Android", "iOS", "Kotlin", "Swift", "Java", "JavaScript", "TypeScript", "Android Studio", "Xcode", "Ionic", "Expo", "Firebase"] },
+  { category: "CMS", items: ["WordPress", "Shopify", "Webflow", "Wix", "Drupal", "Joomla", "Contentful", "Strapi", "PHP", "JavaScript", "TypeScript", "HTML", "CSS", "MySQL", "GraphQL"] },
+  { category: "Graphics", items: ["Adobe Photoshop", "Adobe Illustrator", "Adobe After Effects", "Adobe Premiere Pro", "Figma", "Sketch", "Canva", "Blender", "CorelDRAW", "SVG", "HTML5 Canvas", "CSS", "WebGL", "Three.js", "JavaScript"] },
 ];
 
 const portfolioItems = [
@@ -260,8 +268,9 @@ const Navbar = () => {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 border border-slate-200"
+              className="lg:hidden rounded-xl border border-slate-200 p-2.5 text-slate-800 shadow-sm transition-all hover:bg-sky-50 hover:text-[#0f6cbd] active:scale-95"
               aria-label="Toggle Navigation"
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -284,17 +293,17 @@ const Navbar = () => {
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 {/* Left Side Highlight Box */}
-                <div className="lg:col-span-3 bg-slate-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+                <div className="flex min-h-[430px] flex-col rounded-3xl border border-slate-200/80 bg-slate-50 p-8 lg:col-span-3 lg:p-9">
                   <div className="space-y-3">
-                    <h3 className="text-2xl font-extrabold text-slate-900 leading-tight">Built to Win</h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <h3 className="max-w-[240px] text-3xl font-extrabold leading-tight text-slate-900">Developed to Perform</h3>
+                    <p className="max-w-[300px] text-sm leading-relaxed text-slate-600 sm:text-base">
                       Transforming business with our future-ready tech solutions. Get custom products for accelerated digital transformation across industries globally.
                     </p>
                   </div>
                   
                   {/* Product Visual */}
-                  <div className="mt-6 flex justify-center">
-                    <div className="flex h-44 w-full items-center justify-center overflow-hidden rounded-2xl sm:h-52 lg:h-44">
+                  <div className="mt-auto flex justify-center pt-8">
+                    <div className="flex h-48 w-full items-center justify-center overflow-hidden rounded-2xl sm:h-56 lg:h-52">
                       <img
                         src={builtToWinImage}
                         alt="Mobile dashboard and digital wallet applications"
@@ -348,9 +357,15 @@ const Navbar = () => {
           >
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-                <div className="flex rounded-2xl border border-slate-200/80 bg-slate-50 p-6 lg:col-span-3">
-                  <div className="flex w-full justify-center">
-                    <div className="flex h-44 w-full items-center justify-center overflow-hidden rounded-2xl sm:h-52 lg:h-44">
+                <div className="flex min-h-[430px] flex-col rounded-3xl border border-slate-200/80 bg-slate-50 p-8 lg:col-span-3 lg:p-9">
+                  <div className="space-y-3">
+                    <h3 className="max-w-[250px] text-3xl font-extrabold leading-tight text-slate-900">Industries We Transform</h3>
+                    <p className="max-w-[300px] text-sm leading-relaxed text-slate-600 sm:text-base">
+                      We create tailored technology solutions that help ambitious businesses innovate, operate smarter, and grow with confidence.
+                    </p>
+                  </div>
+                  <div className="mt-auto flex justify-center pt-8">
+                    <div className="flex h-48 w-full items-center justify-center overflow-hidden rounded-2xl sm:h-56 lg:h-52">
                       <img
                         src={builtToWinImage}
                         alt="Mobile dashboard and digital wallet applications"
@@ -395,7 +410,7 @@ const Navbar = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             onMouseEnter={() => setActiveDropdown("technology")}
             onMouseLeave={() => setActiveDropdown(null)}
-            className="fixed left-0 right-0 top-[4rem] lg:top-[5rem] z-40 border-b border-slate-200 bg-white shadow-2xl"
+            className="fixed left-0 right-0 top-[4rem] z-40 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-2xl lg:top-[5rem] lg:max-h-[calc(100vh-5rem)]"
           >
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
@@ -407,7 +422,7 @@ const Navbar = () => {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-5">
                   {technologiesMegaMenu.map((group) => (
                     <div key={group.category} className="space-y-2 border-b border-slate-100 pb-4 sm:border-b-0 sm:pb-0">
                       <h4 className="text-sm font-extrabold tracking-tight text-slate-900">{group.category}</h4>
@@ -437,32 +452,61 @@ const Navbar = () => {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <>
+          <motion.button
+            type="button"
+            aria-label="Close navigation menu"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 z-40 bg-slate-950/30 backdrop-blur-[1px] lg:hidden"
+          />
+          <motion.aside
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 240, damping: 25 }}
-            className="fixed inset-y-0 right-0 top-16 w-[88vw] max-w-sm bg-white border-l border-slate-200 p-6 shadow-2xl z-50 lg:hidden overflow-y-auto"
+            className="fixed inset-y-0 right-0 top-16 z-50 w-[88vw] max-w-sm overflow-y-auto border-l border-slate-200 bg-white p-5 shadow-2xl lg:hidden sm:p-6"
           >
-            <div className="flex flex-col gap-4">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
+              <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#0f6cbd]">Navigation</span>
+              <button type="button" onClick={() => setIsOpen(false)} className="rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-[#0f6cbd]" aria-label="Close navigation menu"><X size={20} /></button>
+            </div>
+            <div className="flex flex-col gap-2">
               <Link to="/" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Home
               </Link>
               <Link to="/services" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
-                Services & Mega Menu
+                Services
               </Link>
               <details className="border-b border-slate-100 py-2">
-                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Technologies</summary>
+                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Industries</summary>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-3 text-sm text-slate-600">
-                  {technologiesMegaMenu.flatMap((group) => group.items).map((item) => (
-                    <button key={item} type="button" onClick={() => setIsOpen(false)} className="text-left hover:text-[#0f6cbd]">
-                      {item}
-                    </button>
+                  {industriesMegaMenu.map((industry) => (
+                    <Link key={industry.title} to="/services" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
+                      {industry.title}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+              <details className="border-b border-slate-100 py-2">
+                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Technologies</summary>
+                <div className="space-y-4 pt-3 text-sm text-slate-600">
+                  {technologiesMegaMenu.map((group) => (
+                    <div key={group.category}>
+                      <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-slate-800">{group.category}</p>
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                        {group.items.map((item) => (
+                          <button key={item} type="button" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
+                            {item}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </details>
               <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
-                Portfolio & Case Studies
+                Portfolio
               </Link>
               <Link to="/team" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Team
@@ -476,7 +520,8 @@ const Navbar = () => {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </motion.aside>
+          </>
         )}
       </AnimatePresence>
     </>

@@ -87,7 +87,7 @@ export const projectArchitectures: Record<string, { title: string; description: 
 export const projectsData: Project[] = [
   {
     id: "kls-property-portal",
-    title: "KLS PROPERTY PORTAL",
+    title: "KLS",
     subtitle: "Robust Property Management Software Designed for Real Estate Professionals",
     category: "Web Application",
     client: "KLS Real Estate Group",
@@ -233,7 +233,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "players-evaluation-system",
-    title: "PLAYERS EVALUATION SYSTEM",
+    title: "FOOTBALLER",
     subtitle: "Data-Driven Sports Performance & Player Trait Evaluation Platform",
     category: "SaaS & Analytics",
     client: "Apex Sports Academy & League Management",
@@ -507,7 +507,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "matchpro-operations-platform",
-    title: "MATCHPRO",
+    title: "MYPLAYS",
     subtitle: "Operations Management Platform for Gaming & Points-Based Businesses",
     category: "SaaS & Analytics",
     client: "MyPlays / MatchPro",
@@ -566,7 +566,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "khyratna-ecommerce-app",
-    title: "KHYRATNA ECOMMERCE APP",
+    title: "KHYRATNA",
     subtitle: "Cross-Platform Shopping Experience for Modern Consumers",
     category: "Mobile App",
     client: "Khyratna",

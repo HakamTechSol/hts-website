@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, CheckCircle2, Code2, Smartphone, Shield, Star, Users, Zap, 
+  ArrowRight, CheckCircle2, Code2, Smartphone, Shield, Star, Users, Zap, Database,
   Sparkles, Trophy, Cpu, Building2, Stethoscope, GraduationCap, Car, ShoppingCart, Activity, PenTool, Megaphone, Clock3, Landmark, Truck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,14 +23,11 @@ import sportsImage from "@/assets/industries/sports.jpg";
 import ecommerceImage from "@/assets/industries/ecommerce.jpg";
 
 const servicesList = [
-  {
-    category: "Mobile App Development",
-    desc: "iOS, Android, and FlutterFlow cross-platform apps built for high retention.",
-    icon: Smartphone,
-  },
+  { category: "AI & Automations", desc: "Workflow automation, NLP, and intelligent data modeling.", icon: Cpu },
+  { category: "Mobile App Development", desc: "iOS, Android, and FlutterFlow cross-platform apps built for high retention.", icon: Smartphone },
   {
     category: "Custom Software Development",
-    desc: "Tailored ERP, CRM, and CMS solutions for enterprise workflows.",
+    desc: "Tailored ERP, CRM, and custom software solutions designed around your enterprise workflows.",
     icon: Code2,
   },
   {
@@ -39,9 +36,9 @@ const servicesList = [
     icon: Building2,
   },
   {
-    category: "AI & Automations",
-    desc: "Workflow automation, NLP, and intelligent data modeling.",
-    icon: Cpu,
+    category: "CMS Development",
+    desc: "Flexible and scalable CMS solutions for easy content management and business growth.",
+    icon: Database,
   },
   {
     category: "Cloud Services & DevOps",
@@ -84,32 +81,32 @@ const Index = () => {
         <Navbar />
 
         {/* 1. Hero Section */}
-        <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 pt-28 pb-16 md:pt-36 md:pb-24">
+        <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 pb-14 pt-24 sm:pb-16 sm:pt-28 md:pb-24 md:pt-36">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" aria-hidden="true">
             <source src={homeHeroVideo} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-slate-950/75" aria-hidden="true" />
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center">
-              <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="flex flex-col items-center space-y-5 text-center sm:space-y-6">
                 {/* <div className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-sky-300">
                 </div> */}
 
-                <h1 className="max-w-6xl text-4xl font-extrabold leading-tight text-white sm:text-6xl">
+                <h1 className="max-w-6xl text-3xl font-extrabold leading-tight text-white sm:text-6xl">
                   Design and Build your <span className="text-sky-400">Digital Reality</span> with Clarity.
                 </h1>
 
-                <p className="max-w-4xl text-lg leading-relaxed text-slate-200 sm:text-xl">
+                <p className="max-w-4xl text-base leading-7 text-slate-200 sm:text-xl sm:leading-relaxed">
                   HakamTechSol partners with ambitious teams globally to engineer web portals, mobile apps, SaaS platforms, and enterprise software.
                 </p>
 
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                  <Link to="/quote">
+                <div className="flex w-full max-w-sm flex-col gap-3 pt-2 sm:max-w-none sm:flex-row sm:gap-4">
+                  <Link to="/quote" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full sm:w-auto bg-[#0f6cbd] hover:bg-blue-700 text-white font-extrabold px-8 py-6 text-base rounded-full shadow-lg">
                       GET A QUOTE <ArrowRight size={18} className="ml-2" />
                     </Button>
                   </Link>
-                  <Link to="/portfolio">
+                  <Link to="/portfolio" className="w-full sm:w-auto">
                     <Button size="lg" variant="outline" className="w-full sm:w-auto border-slate-600 bg-slate-900/80 hover:bg-slate-800 text-white font-bold px-8 py-6 text-base rounded-full shadow-sm">
                       Explore Case Studies
                     </Button>
@@ -117,21 +114,25 @@ const Index = () => {
                 </div>
 
                 {/* Key Stats Bar */}
-                <div className="grid w-full max-w-5xl grid-cols-2 gap-4 border-t border-slate-700 pt-8 text-center sm:grid-cols-4">
+                <div className="grid w-full max-w-5xl grid-cols-2 gap-x-3 gap-y-5 border-t border-slate-700 pt-6 text-center sm:grid-cols-5 sm:gap-4 sm:pt-8">
                   <div>
-                    <div className="text-2xl font-extrabold text-white">50+</div>
+                    <div className="text-2xl font-extrabold text-white">100+</div>
                     <div className="text-xs text-slate-300 font-medium">Projects Delivered</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold text-[#0f6cbd]">99.9%</div>
-                    <div className="text-xs text-slate-300 font-medium">Platform Uptime</div>
+                    <div className="text-2xl font-extrabold text-[#0f6cbd]">100%</div>
+                    <div className="text-xs text-slate-300 font-medium">Client Satisfaction</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold text-white">4.9 / 5.0</div>
-                    <div className="text-xs text-slate-300 font-medium">Client Rating</div>
+                    <div className="text-2xl font-extrabold text-white">100%</div>
+                    <div className="text-xs text-slate-300 font-medium">On-Time Delivery</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold text-[#0f6cbd]">24/7</div>
+                    <div className="text-2xl font-extrabold text-[#0f6cbd]">100%</div>
+                    <div className="text-xs text-slate-300 font-medium">Client Retention</div>
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <div className="text-2xl font-extrabold text-white">24/7</div>
                     <div className="text-xs text-slate-300 font-medium">Dedicated Support</div>
                   </div>
                 </div>
@@ -142,14 +143,14 @@ const Index = () => {
         </section>
 
         {/* 2. Featured Case Studies Section (With 3D Card Flip Effect!) */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-b border-slate-200">
+        <section className="border-b border-slate-200 bg-slate-50 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
           <div className="container mx-auto max-w-6xl">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            <div className="mb-9 flex flex-col items-start justify-between gap-4 md:mb-12 md:flex-row md:items-end">
               <div>
                 <span className="px-3.5 py-1 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold uppercase tracking-widest">
                   Featured Case Studies
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <h2 className="mt-3 text-2xl font-extrabold text-slate-900 sm:text-4xl">
                   Hover to Flip & Explore Real Client Projects
                 </h2>
               </div>
@@ -159,8 +160,8 @@ const Index = () => {
             </div>
 
             {/* 3D Flip Card Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-              {projectsData.slice(0, 4).map((project) => (
+            <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-8">
+              {projectsData.filter((project) => ["khyratna-ecommerce-app", "matchpro-operations-platform", "players-evaluation-system", "kls-property-portal"].includes(project.id)).map((project) => (
                 <ProjectFlipCard key={project.id} project={project} />
               ))}
             </div>
@@ -168,13 +169,13 @@ const Index = () => {
         </section>
 
         {/* 3. Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
+        <section className="border-b border-slate-200 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
           <div className="container mx-auto">
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
+            <div className="mx-auto mb-10 max-w-2xl space-y-3 text-center sm:mb-14">
               <span className="px-3.5 py-1.5 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold uppercase tracking-widest">
                 Our Core Services
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+              <h2 className="text-2xl font-extrabold text-slate-900 sm:text-4xl">
                 End-to-End Technology Solutions
               </h2>
               <p className="text-slate-600 text-sm">
@@ -182,7 +183,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
               {servicesList.map((service, index) => (
                 <div key={index} className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-sky-300 hover:shadow-lg transition-all space-y-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#0f6cbd] text-white flex items-center justify-center font-bold shadow-md">
