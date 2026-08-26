@@ -15,7 +15,7 @@ const services: { illustration: ServiceIllustrationType; title: string; subtitle
   { illustration: "cms", title: "CMS Development", subtitle: "Flexible and scalable CMS solutions for easy content management and business growth.", features: ["Custom content workflows", "Scalable publishing tools", "Easy administration"] },
   { illustration: "design", title: "Graphic Designing", subtitle: "Visual identity and product design that makes your brand memorable", features: ["Brand identity systems", "Product UI/UX design", "Campaign-ready creative assets"] },
   { illustration: "marketing", title: "Social Media Marketing", subtitle: "Content and performance campaigns designed for measurable growth", features: ["Social content strategy", "Paid campaign management", "Audience and performance reporting"] },
-  { illustration: "cloud", title: "Cloud Infrastructure & DevOps", subtitle: "Reliable cloud delivery, monitoring and scalable deployments", features: ["Cloud migration and setup", "CI/CD delivery pipelines", "Monitoring and disaster recovery"] },
+  { illustration: "marketing", title: "Digital Marketing", subtitle: "Data-led marketing strategies built for visibility, engagement, and growth", features: ["Search and social campaigns", "Content strategy and creative", "Performance reporting"] },
   { illustration: "team", title: "Staff Augmentation", subtitle: "Experienced engineers who integrate with your delivery team", features: ["Mobile and full-stack talent", "Flexible sprint engagement", "Direct collaboration and ownership"] },
 ];
 

@@ -1,4 +1,3 @@
-import { Code2 } from "lucide-react";
 import { TeamMember } from "@/data/teamData";
 
 interface TeamCardProps {
@@ -14,13 +13,6 @@ export const TeamCard = ({ member }: TeamCardProps) => (
       <h2 className="text-2xl font-extrabold leading-tight text-[#0f5c99] sm:text-3xl">{member.name}</h2>
       <p className="text-lg font-medium leading-tight text-[#0f5c99] sm:text-xl">{member.role}</p>
       <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{member.bio}</p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {[...member.skills, ...member.technologies].map((item) => (
-          <span key={item} className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-[10px] font-bold text-[#0f6cbd] ring-1 ring-inset ring-sky-100">
-            <Code2 size={11} /> {item}
-          </span>
-        ))}
-      </div>
     </div>
   </article>
 );

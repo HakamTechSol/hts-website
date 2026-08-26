@@ -22,7 +22,7 @@ const servicesMegaMenu = [
   },
   {
     category: "Web Development",
-    items: ["Ecommerce Website Development", "Web Portals"],
+    items: ["Ecommerce Website Development", "Web Portals", "ERP & HRMS Development"],
   },
   {
     category: "Game Development",
@@ -31,10 +31,6 @@ const servicesMegaMenu = [
   {
     category: "AI & Automations",
     items: ["Generative AI", "Natural Language Processing", "AI Agent Development"],
-  },
-  {
-    category: "Cloud Services",
-    items: ["Cloud Application Development", "Cloud Migration", "Cloud Support & Maintenance"],
   },
   {
     category: "Staff Augmentation",
@@ -46,7 +42,7 @@ const servicesMegaMenu = [
   },
   {
     category: "Digital Marketing Services",
-    items: ["Graphic Designing", "Social Media Marketing", "Search Engine Marketing", "Search Engine Optimization"],
+    items: ["Graphic Designing", "Social Media Marketing", "Search Engine Optimization"],
   },
 ];
 
@@ -57,21 +53,23 @@ const industriesMegaMenu = [
   { title: "Sports Analytics", desc: "Turning player and team data into actionable performance insights.", icon: Trophy },
   { title: "ECommerce & Retail", desc: "Driving online growth with reliable commerce solutions.", icon: ShoppingCart },
   { title: "Real Estate", desc: "Innovating real estate with custom tech.", icon: Building2 },
-  { title: "On-Demand", desc: "Elevating on-demand services with innovative tech.", icon: Clock3 },
   { title: "Fintech", desc: "Empowering fintech with specialized tech services.", icon: Landmark },
   { title: "Logistics", desc: "Optimizing logistics with intelligent tech.", icon: Truck },
   { title: "Travel & Hospitality", desc: "Creating connected experiences for travel and hospitality businesses.", icon: Plane },
   { title: "Media & Entertainment", desc: "Building engaging digital platforms for media and entertainment.", icon: Clapperboard },
   { title: "Manufacturing", desc: "Streamlining operations with practical manufacturing technology.", icon: Factory },
+  { title: "On-Demand", desc: "Elevating on-demand services with innovative tech.", icon: Clock3 },
 ];
 
 const technologiesMegaMenu = [
-  { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "React.js", "TypeScript", "Next.js", "Vue.js", "Angular", "Svelte", "SolidJS", "Tailwind CSS", "Bootstrap", "Vite", "Sass"] },
-  { category: "Backend", items: ["Node.js", "Python", "Laravel", "PHP", ".NET", "C#", "Java", "Go", "Ruby", "Express.js", "NestJS", "Django", "Spring Boot", "FastAPI", "Firebase"] },
-  { category: "Mobile Development", items: ["React Native", "Flutter", "Dart", "Android", "iOS", "Kotlin", "Swift", "Java", "JavaScript", "TypeScript", "Android Studio", "Xcode", "Ionic", "Expo", "Firebase"] },
-  { category: "CMS", items: ["WordPress", "Shopify", "Webflow", "Wix", "Drupal", "Joomla", "Contentful", "Strapi", "PHP", "JavaScript", "TypeScript", "HTML", "CSS", "MySQL", "GraphQL"] },
-  { category: "Graphics", items: ["Adobe Photoshop", "Adobe Illustrator", "Adobe After Effects", "Adobe Premiere Pro", "Figma", "Sketch", "Canva", "Blender", "CorelDRAW", "SVG", "HTML5 Canvas", "CSS", "WebGL", "Three.js", "JavaScript"] },
+  { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React JS", "TypeScript", "Next JS", "Vue JS",  "Angular JS" ,"Solid JS", "Tailwind CSS", "Bootstrap", "Vite" , "EcmaScript" ,"MaterialUI" , "VBScript" , "JQuery" ,"AJAX" , "Three JS" ] },
+  { category: "Backend", items: ["Node JS", "Python", "Laravel","CodeIgniter", "PHP", ".NET", "C#", "C++" , "Go", "Ruby", "Express JS", "Nest JS", "Django", "Spring Boot", "FastAPI", "Supabase", "Oracle" , "SQL" , "MySQL" , "MongoDB" , "Docker" , ] },
+  { category: "Mobile Development", items: ["React Native", "Flutter", "Dart", "Android", "iOS", "Kotlin", "Swift", "Java", "Android Studio", "Xcode", "Ionic", "Expo", "Firebase" ,"Xamarin" ,  "Unity3D" , "Cordova" , "Objective C"] },
+  { category: "Marketing", items: [ "Meta Ads" , "On-Page Optimization" , "Off-Page Optimization" , "Google Ads" , "Email Marketing"  , ]  },
+  { category: "Graphics", items: ["Adobe Photoshop", "Adobe Illustrator", "Adobe After Effects", "Adobe Premiere Pro", "Figma", "Sketch", "Canva", "Blender", "CorelDRAW", "SVG", "HTML5 Canvas",    ] },
 ];
+
+const CMS = ["WordPress", "Shopify", "Webflow", "Wix", "Drupal", "Joomla", "Strapi",  "Magento" , "Cake PHP" ];
 
 const portfolioItems = [
   { id: "kls-property-portal", name: "KLS Property Portal", category: "Laravel / PHP" },
@@ -184,7 +182,7 @@ const Navbar = () => {
                     activeDropdown === "technology" ? "text-[#0f6cbd]" : "text-slate-800 hover:text-[#0f6cbd]"
                   }`}
                 >
-                  Technologies
+                  Tools &amp; Technologies
                   <ChevronDown size={15} className={`transition-transform duration-200 ${activeDropdown === "technology" ? "rotate-180 text-[#0f6cbd]" : ""}`} />
                 </button>
               </div>
@@ -288,7 +286,7 @@ const Navbar = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             onMouseEnter={() => setActiveDropdown("services")}
             onMouseLeave={() => setActiveDropdown(null)}
-            className="fixed left-0 right-0 top-[4rem] lg:top-[5rem] z-40 bg-white border-b border-slate-200 shadow-2xl overflow-y-auto max-h-[85vh]"
+            className="fixed left-0 right-0 top-[4rem] z-40 border-b border-slate-200 bg-white shadow-2xl lg:top-[5rem]"
           >
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -334,6 +332,21 @@ const Navbar = () => {
                           </li>
                         ))}
                       </ul>
+                      {group.category === "CMS" && (
+                        <div className="space-y-1.5 pt-4">
+                          <h4 className="text-sm font-extrabold tracking-tight text-slate-900">Marketing</h4>
+                          <ul className="space-y-1.5 text-xs text-slate-600">
+                            {CMS.map((item) => (
+                              <li key={item}>
+                                <Link to="/services" onClick={() => setActiveDropdown(null)} className="inline-flex items-center gap-1.5 text-left transition-colors hover:text-[#0f6cbd] group">
+                                  <span className="text-slate-400 transition-colors group-hover:text-[#0f6cbd]">â€º</span>
+                                  <span>{item}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -353,7 +366,7 @@ const Navbar = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             onMouseEnter={() => setActiveDropdown("industries")}
             onMouseLeave={() => setActiveDropdown(null)}
-            className="fixed left-0 right-0 top-[4rem] lg:top-[5rem] z-40 bg-white border-b border-slate-200 shadow-2xl overflow-y-auto max-h-[85vh]"
+            className="fixed left-0 right-0 top-[4rem] z-40 border-b border-slate-200 bg-white shadow-2xl lg:top-[5rem]"
           >
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
@@ -414,32 +427,54 @@ const Navbar = () => {
           >
             <div className="container mx-auto px-6 py-8 lg:py-10">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-                <div className="h-52 overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-950 lg:col-span-3 lg:h-[220px]">
-                  <img
-                    src={technologiesDropdownImage}
-                    alt="Technology solutions for web, mobile, backend, and commerce development"
-                    className="h-full w-full object-cover object-center"
-                  />
+                <div className="flex min-h-[430px] flex-col rounded-3xl border border-slate-200/80 bg-slate-50 p-8 lg:col-span-3 lg:p-9">
+                  <div className="space-y-3">
+                    <h3 className="max-w-[250px] text-3xl font-extrabold leading-tight text-slate-900">Tools &amp; Technologies</h3>
+                  </div>
+                  <div className="mt-[28px] flex justify-center">
+                    <div className="flex h-48 w-full items-center justify-center overflow-hidden rounded-2xl bg-slate-950 sm:h-56 lg:h-52">
+                      <img
+                        src={technologiesDropdownImage}
+                        alt="Technology solutions for web, mobile, backend, and commerce development"
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-5">
+                <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-5">
                   {technologiesMegaMenu.map((group) => (
                     <div key={group.category} className="space-y-2 border-b border-slate-100 pb-4 sm:border-b-0 sm:pb-0">
                       <h4 className="text-sm font-extrabold tracking-tight text-slate-900">{group.category}</h4>
                       <ul className="space-y-1.5 text-xs text-slate-600">
                         {group.items.map((item) => (
                           <li key={item}>
-                            <button
-                              type="button"
+                            <Link
+                              to="/services"
                               onClick={() => setActiveDropdown(null)}
                               className="inline-flex items-center gap-1.5 text-left transition-colors hover:text-[#0f6cbd] group"
                             >
                               <span className="text-slate-400 transition-colors group-hover:text-[#0f6cbd]">›</span>
                               <span>{item}</span>
-                            </button>
+                            </Link>
                           </li>
                         ))}
                       </ul>
+                      {group.category === "Marketing" && (
+                        <div className="space-y-1.5 pt-4">
+                          <h4 className="text-sm font-extrabold tracking-tight text-slate-900">CMS</h4>
+                          <ul className="space-y-1.5 text-xs text-slate-600">
+                            {CMS.map((item) => (
+                              <li key={item}>
+                              <Link to="/services" onClick={() => setActiveDropdown(null)} className="inline-flex items-center gap-1.5 text-left transition-colors hover:text-[#0f6cbd] group">
+                                <span className="text-slate-400 transition-colors group-hover:text-[#0f6cbd]">›</span>
+                                <span>{item}</span>
+                              </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -489,18 +524,28 @@ const Navbar = () => {
                 </div>
               </details>
               <details className="border-b border-slate-100 py-2">
-                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Technologies</summary>
+                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Tools &amp; Technologies</summary>
                 <div className="space-y-4 pt-3 text-sm text-slate-600">
                   {technologiesMegaMenu.map((group) => (
                     <div key={group.category}>
                       <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-slate-800">{group.category}</p>
                       <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                         {group.items.map((item) => (
-                          <button key={item} type="button" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
+                          <Link key={item} to="/services" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
                             {item}
-                          </button>
+                          </Link>
                         ))}
                       </div>
+                      {group.category === "Marketing" && (
+                        <div className="mt-4">
+                          <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-slate-800">CMS</p>
+                          {CMS.map((item) => (
+                            <Link key={item} to="/services" onClick={() => setIsOpen(false)} className="block text-left transition-colors hover:text-[#0f6cbd]">
+                              {item}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

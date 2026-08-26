@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, CheckCircle2, Code2, Smartphone, Shield, Star, Users, Zap, Database,
-  Sparkles, Trophy, Cpu, Building2, Stethoscope, GraduationCap, Car, ShoppingCart, Activity, PenTool, Megaphone, Clock3, Landmark, Truck
+  ArrowRight, CheckCircle2, Code2, Smartphone, Star, Users, Zap, Database,
+  Sparkles, Trophy, Cpu, Building2, Stethoscope, GraduationCap, Car, ShoppingCart, Activity, PenTool, Megaphone, Clock3, Landmark, Truck, Plane, Clapperboard, Factory
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -21,6 +21,9 @@ import educationImage from "@/assets/industries/education.jpg";
 import realEstateImage from "@/assets/industries/real-estate.jpg";
 import sportsImage from "@/assets/industries/sports.jpg";
 import ecommerceImage from "@/assets/industries/ecommerce.jpg";
+import manufacturingImage from "@/assets/industries/manufacturing.jpg";
+import travelAndHospitalityImage from "@/assets/industries/travel-and-hospitality.jpg";
+import mediaEntertainmentImage from "@/assets/industries/media-entertainment.webp";
 
 const servicesList = [
   { category: "AI & Automations", desc: "Workflow automation, NLP, and intelligent data modeling.", icon: Cpu },
@@ -41,9 +44,9 @@ const servicesList = [
     icon: Database,
   },
   {
-    category: "Cloud Services & DevOps",
-    desc: "Scalable cloud infrastructure, migration, and 24/7 support.",
-    icon: Shield,
+    category: "Digital Marketing",
+    desc: "Data-led digital marketing strategies that build visibility, engagement, and measurable growth.",
+    icon: Megaphone,
   },
   {
     category: "Graphic Designing",
@@ -72,6 +75,9 @@ const industriesList = [
   { name: "On-Demand", desc: "Fast, reliable booking and service-delivery platforms.", icon: Clock3, image: automotiveImage },
   { name: "Fintech", desc: "Secure financial experiences, workflows, and digital products.", icon: Landmark, image: healthcareImage },
   { name: "Logistics", desc: "Connected fleet, delivery, and operational visibility tools.", icon: Truck, image: realEstateImage },
+  { name: "Travel & Hospitality", desc: "Connected booking and guest experiences for travel and hospitality businesses.", icon: Plane, image: travelAndHospitalityImage },
+  { name: "Media & Entertainment", desc: "Engaging digital platforms for media and entertainment experiences.", icon: Clapperboard, image: mediaEntertainmentImage },
+  { name: "Manufacturing", desc: "Practical manufacturing technology for smarter operations.", icon: Factory, image: manufacturingImage },
 ];
 
 const Index = () => {
@@ -100,7 +106,7 @@ const Index = () => {
                   HakamTechSol partners with ambitious teams globally to engineer web portals, mobile apps, SaaS platforms, and enterprise software.
                 </p>
 
-                <div className="flex w-full max-w-sm flex-col gap-3 pt-2 sm:max-w-none sm:flex-row sm:gap-4">
+                <div className="flex w-full max-w-sm flex-col gap-3 pt-2 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
                   <Link to="/quote" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full sm:w-auto bg-[#0f6cbd] hover:bg-blue-700 text-white font-extrabold px-8 py-6 text-base rounded-full shadow-lg">
                       GET A QUOTE <ArrowRight size={18} className="ml-2" />
@@ -117,23 +123,23 @@ const Index = () => {
                 <div className="grid w-full max-w-5xl grid-cols-2 gap-x-3 gap-y-5 border-t border-slate-700 pt-6 text-center sm:grid-cols-5 sm:gap-4 sm:pt-8">
                   <div>
                     <div className="text-2xl font-extrabold text-white">100+</div>
-                    <div className="text-xs text-slate-300 font-medium">Projects Delivered</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-extrabold text-[#0f6cbd]">100%</div>
-                    <div className="text-xs text-slate-300 font-medium">Client Satisfaction</div>
+                    <div className="text-xs text-white font-medium">Projects Delivered</div>
                   </div>
                   <div>
                     <div className="text-2xl font-extrabold text-white">100%</div>
-                    <div className="text-xs text-slate-300 font-medium">On-Time Delivery</div>
+                    <div className="text-xs text-white font-medium">Client Satisfaction</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold text-[#0f6cbd]">100%</div>
-                    <div className="text-xs text-slate-300 font-medium">Client Retention</div>
+                    <div className="text-2xl font-extrabold text-white">100%</div>
+                    <div className="text-xs text-white font-medium">On-Time Delivery</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-extrabold text-white">100%</div>
+                    <div className="text-xs text-white font-medium">Client Retention</div>
                   </div>
                   <div className="col-span-2 sm:col-span-1">
                     <div className="text-2xl font-extrabold text-white">24/7</div>
-                    <div className="text-xs text-slate-300 font-medium">Dedicated Support</div>
+                    <div className="text-xs text-white font-medium">Dedicated Support</div>
                   </div>
                 </div>
               </div>

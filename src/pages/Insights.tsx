@@ -5,7 +5,7 @@ import PageTransition from "@/components/PageTransition";
 import heroImage from "@/assets/team.jpg";
 
 const stats = [
-  { value: "50+", label: "Projects Delivered", icon: Rocket },
+  { value: "100+", label: "Projects Delivered", icon: Rocket },
   { value: "15+", label: "Global Partners", icon: UsersRound },
   { value: "7+", label: "Years Experience", icon: Award },
   { value: "24/7", label: "Support Available", icon: Cloud },
@@ -30,8 +30,7 @@ const Insights = () => (
           <div>
             <span className="text-xs font-extrabold uppercase tracking-wider text-[#0f6cbd]">Our Insights</span>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight text-slate-950 sm:text-5xl">Ideas That Shape <span className="block text-[#146ee8]">Digital Innovation</span></h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">Explore technology insights, development trends, digital transformation strategies, and practical ideas to help businesses grow in a digital-first world.</p>
-            <a href="#insight-focus" className="mt-7 inline-flex items-center gap-3 rounded-lg bg-[#146ee8] px-7 py-3.5 text-sm font-extrabold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl">Explore Insights <ArrowRight size={17} /></a>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">Discover the latest technology insights, emerging development trends, innovative digital solutions, and proven transformation strategies designed to help businesses stay ahead in a rapidly evolving digital landscape. Explore practical ideas, industry perspectives, and actionable guidance on modern technologies, software development, automation, AI, cloud solutions, and digital experiences that can improve efficiency, strengthen customer engagement, and drive sustainable business growth.</p>
           </div>
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="overflow-hidden rounded-[28px] border border-sky-100 bg-white p-2 shadow-2xl"><img src={heroImage} alt="HakamTechSol team collaborating on technology solutions" className="h-[300px] w-full rounded-3xl object-cover sm:h-[390px]" /></div>
@@ -61,7 +60,7 @@ const Insights = () => (
 
       <section className="border-t border-slate-100 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8"><div className="container mx-auto max-w-6xl"><div className="text-center"><span className="text-xs font-extrabold uppercase tracking-wider text-[#0f6cbd]">Our Values</span><h2 className="mt-2 text-3xl font-extrabold text-slate-950 sm:text-4xl">What Drives Our Insights</h2></div><div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">{values.map(({ title, text, icon: Icon }) => <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-sky-200 hover:shadow-lg"><div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-sky-50 text-[#146ee8]"><Icon size={28} /></div><h3 className="mt-5 text-lg font-extrabold text-slate-950">{title}</h3><div className="mx-auto mt-2 h-0.5 w-6 bg-[#146ee8]" /><p className="mt-4 text-sm leading-relaxed text-slate-600">{text}</p></div>)}</div></div></section>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8"><div className="container mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 rounded-3xl border border-sky-100 bg-gradient-to-r from-sky-100 via-white to-blue-100 px-7 py-7 shadow-sm md:flex-row"><div className="flex items-center gap-5"><div className="hidden h-16 w-16 items-center justify-center rounded-full bg-[#146ee8] text-white sm:flex"><Rocket size={30} /></div><div><h2 className="text-2xl font-extrabold text-slate-950">Stay Ahead With Our Latest Insights</h2><p className="mt-1 max-w-xl text-sm text-slate-700">Discover ideas that help you plan, build, and grow your digital products with clarity.</p></div></div><a href="#insight-focus" className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#146ee8] px-7 py-3.5 text-sm font-extrabold text-white shadow-md hover:bg-blue-700">Explore Insights <ArrowRight size={17} /></a></div></section>
+      <section className="px-4 py-12 sm:px-6 lg:px-8"><div className="container mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 rounded-3xl border border-sky-100 bg-gradient-to-r from-sky-100 via-white to-blue-100 px-7 py-7 shadow-sm md:flex-row"><div className="flex items-center gap-5"><div className="hidden h-16 w-16 items-center justify-center rounded-full bg-[#146ee8] text-white sm:flex"><Rocket size={30} /></div><div><h2 className="text-2xl font-extrabold text-slate-950">Stay Ahead With Our Latest Insights</h2><p className="mt-1 max-w-xl text-sm text-slate-700">Discover ideas that help you plan, build, and grow your digital products with clarity.</p></div></div><a href="/quote" className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#146ee8] px-7 py-3.5 text-sm font-extrabold text-white shadow-md hover:bg-blue-700">Get A Quote <ArrowRight size={17} /></a></div></section>
       <Footer />
     </div>
   </PageTransition>

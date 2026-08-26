@@ -5,19 +5,38 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import { supabase } from "@/lib/supabase";
 import { FaqSection } from "@/components/FaqSection";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMessage("");
+    try {
+      const { error } = await supabase.from("contact_messages").insert([
+        { name: formData.name, email: formData.email, message: formData.message }
+      ]);
+      if (error) {
+        throw error;
+      }
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error(err);
+      setErrorMessage(err.message || "Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -108,13 +127,15 @@ const Contact = () => {
                       <div className="pt-2">
                         <Button
                           type="submit"
-                          className="w-full sm:w-auto px-10 py-6 rounded-full bg-[#0f6cbd] hover:bg-blue-700 text-white font-extrabold text-sm shadow-xl shadow-blue-500/30 hover:shadow-blue-600/40 hover:scale-[1.03] transition-all duration-300"
+                          disabled={loading}
+                          className={`w-full sm:w-auto px-10 py-6 rounded-full ${loading ? "bg-[#0a5a9c]" : "bg-[#0f6cbd] hover:bg-blue-700"} text-white font-extrabold text-sm shadow-xl shadow-blue-500/30 hover:shadow-blue-600/40 hover:scale-[1.03] transition-all duration-300`}
                         >
-                          Send Message
+                          {loading ? "Sending..." : "Send Message"}
                         </Button>
                       </div>
                     </form>
                   )}
+                  {errorMessage && <p className="text-sm text-red-600 mt-2">{errorMessage}</p>}
                 </div>
 
                 {/* Right Side: Illustration & Contact Info */}

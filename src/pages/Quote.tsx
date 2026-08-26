@@ -5,19 +5,44 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
+import { supabase } from "@/lib/supabase";
 
 const Quote = () => {
   const [submitted, setSubmitted] = useState(false);
   const [searchParams] = useSearchParams();
   const [service, setService] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setService(searchParams.get("service") ?? "");
   }, [searchParams]);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMessage("");
+    try {
+      const formData = new FormData(event.currentTarget);
+      const { error } = await supabase.from("quote_requests").insert([
+        {
+          full_name: formData.get("name"),
+          work_email: formData.get("email"),
+          phone: formData.get("phone"),
+          service_required: service,
+          project_details: formData.get("details")
+        }
+      ]);
+      if (error) {
+        throw error;
+      }
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error(err);
+      setErrorMessage(err.message || "Failed to submit quote request.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -100,7 +125,7 @@ const Quote = () => {
                           <option>AI & Automations</option>
                           <option>Graphic Designing</option>
                           <option>Social Media Marketing</option>
-                          <option>Cloud Infrastructure & DevOps</option>
+                          <option>Digital Marketing</option>
                           <option>Staff Augmentation</option>
                         </select>
                       </label>
@@ -110,11 +135,16 @@ const Quote = () => {
                       <textarea required name="details" rows={5} placeholder="What would you like to build? Include your main goals, timeline, and any key requirements." className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm normal-case tracking-normal text-slate-800 outline-none transition focus:ring-2 focus:ring-[#0f6cbd]" />
                     </label>
 
-                    <Button type="submit" className="mt-6 w-full rounded-full bg-[#0f6cbd] py-6 text-sm font-extrabold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-700 sm:w-auto sm:px-10">
-                      Request Quote
-                    </Button>
+                    <Button
+                        type="submit"
+                        disabled={loading}
+                        className={`mt-6 w-full rounded-full ${loading ? "bg-[#0a5a9c]" : "bg-[#0f6cbd] hover:bg-blue-700"} py-6 text-sm font-extrabold text-white shadow-lg shadow-blue-500/25 transition`}
+                      >
+                        {loading ? "Submitting..." : "Request Quote"}
+                      </Button>
                   </form>
                 )}
+                {errorMessage && <p className="text-sm text-red-600 mt-2">{errorMessage}</p>}
               </section>
             </div>
           </div>

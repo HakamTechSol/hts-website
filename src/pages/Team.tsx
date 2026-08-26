@@ -4,6 +4,9 @@ import PageTransition from "@/components/PageTransition";
 import { TeamCard } from "@/components/TeamCard";
 import { teamMembers } from "@/data/teamData";
 
+const teamOrder = ["Arbaz Ali", "Hunain Haider", "Sanawar Hussain Jaffri", "Mustufa Ali", "Talha Khan"];
+const orderedTeamMembers = [...teamMembers].sort((a, b) => teamOrder.indexOf(a.name) - teamOrder.indexOf(b.name));
+
 const Team = () => (
   <PageTransition>
     <div className="min-h-screen bg-white text-slate-800">
@@ -24,7 +27,7 @@ const Team = () => (
         <div className="pointer-events-none absolute -right-36 bottom-8 h-80 w-80 rotate-45 border-[42px] border-sky-100/60" />
         <div className="container relative mx-auto max-w-5xl">
           <div className="space-y-8 sm:space-y-10">
-            {teamMembers.map((member) => <TeamCard key={member.name} member={member} />)}
+            {orderedTeamMembers.map((member) => <TeamCard key={member.name} member={member} />)}
           </div>
         </div>
       </section>

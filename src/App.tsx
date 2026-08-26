@@ -15,6 +15,7 @@ import Team from "./pages/Team";
 import Insights from "./pages/Insights";
 import Quote from "./pages/Quote";
 import Legal from "./pages/Legal";
+import Faq from "./pages/Faq";
 import ChatWidget from "./components/ChatWidget";
 import BackToTop from "./components/BackToTop";
 
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
         <Route path="/terms" element={<Legal type="terms" />} />
         <Route path="/team" element={<Team />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

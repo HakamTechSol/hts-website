@@ -68,7 +68,7 @@ const Portfolio: React.FC = () => {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Search by project name, tech stack, or features..."
+                  placeholder="Search by Project Name, Tech Stack, or Features..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 bg-white shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] transition-all"
@@ -103,7 +103,7 @@ const Portfolio: React.FC = () => {
         </section>
 
         {/* 2-Column Grid with 3D Card Flip */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 pb-12 pt-16 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             {filteredProjects.length === 0 ? (
               <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 max-w-lg mx-auto shadow-sm">
@@ -127,14 +127,14 @@ const Portfolio: React.FC = () => {
         </section>
 
         {/* Bottom CTA Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 pb-16 pt-12 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-5xl">
             <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl border border-slate-800">
               <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                 <span className="px-4 py-1.5 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-widest border border-sky-500/30">
                   Ready To Build Your Next Big Product?
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight text-white">
                   Let’s transform your idea into a market-ready product.
                 </h2>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">

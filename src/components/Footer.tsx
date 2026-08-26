@@ -58,7 +58,8 @@ const Footer = () => {
               <li><Link to="/portfolio" className="hover:text-[#f97316] transition-colors">Portfolio</Link></li>
               <li><Link to="/contact" className="hover:text-[#f97316] transition-colors">Contact Us</Link></li>
               <li><Link to="/quote" className="hover:text-[#f97316] transition-colors">Get a Quote</Link></li>
-            </ul>
+              <li><Link to="/faq" className="hover:text-[#f97316] transition-colors">FAQ</Link></li>
+          </ul>
           </div>
 
           {/* Core Services */}
@@ -69,7 +70,7 @@ const Footer = () => {
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Custom ERP & Software</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Web Development & Portals</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">AI & Automations</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Cloud & Staff Augmentation</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Staff Augmentation</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Graphic Designing</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Social Media Marketing</Link></li>
             </ul>
@@ -78,14 +79,13 @@ const Footer = () => {
           {/* Contact Details */}
           <div>
             <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-xs text-slate-400">
+            <ul className="space-y-3 text-xs text-white">
               <li className="flex items-start gap-2.5">
                 <Mail size={16} className="text-[#f97316] shrink-0 mt-0.5" />
-                <a href="mailto:alhakamsofts@gmail.com" className="break-all hover:text-white transition-colors">alhakamsofts@gmail.com</a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Mail size={16} className="text-[#f97316] shrink-0 mt-0.5" />
-                <a href="mailto:info@hakamtechsol.com" className="break-all hover:text-white transition-colors">info@hakamtechsol.com</a>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:alhakamsofts@gmail.com" className="break-all transition-colors hover:text-[#f97316]">alhakamsofts@gmail.com</a>
+                  <a href="mailto:info@hakamtechsol.com" className="break-all transition-colors hover:text-[#f97316]">info@hakamtechsol.com</a>
+                </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone size={16} className="text-[#f97316] shrink-0 mt-0.5" />
