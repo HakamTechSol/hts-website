@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
 import { supabase } from "@/lib/supabase";
+import { triggerFormNotification } from "@/lib/form-notifications";
 
 const Quote = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -24,22 +25,25 @@ const Quote = () => {
     setErrorMessage("");
     try {
       const formData = new FormData(event.currentTarget);
+      const name = String(formData.get("name") ?? "");
+      const email = String(formData.get("email") ?? "");
+      const phone = String(formData.get("phone") ?? "");
+      const details = String(formData.get("details") ?? "");
       const { error } = await supabase.from("quote_requests").insert([
         {
-          full_name: formData.get("name"),
-          work_email: formData.get("email"),
-          phone: formData.get("phone"),
+          full_name: name,
+          work_email: email,
+          phone,
           service_required: service,
-          project_details: formData.get("details")
-        }
+          project_details: details,
+        },
       ]);
-      if (error) {
-        throw error;
-      }
+      if (error) throw error;
+      await triggerFormNotification({ type: "quote", name, email, phone, service, projectDetails: details });
       setSubmitted(true);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setErrorMessage(err.message || "Failed to submit quote request.");
+      setErrorMessage(err instanceof Error ? err.message : "Unable to submit your quote request. Please try again.");
     } finally {
       setLoading(false);
     }

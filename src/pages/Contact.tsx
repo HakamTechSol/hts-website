@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, MessageCircle, Bell, Paperclip, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { supabase } from "@/lib/supabase";
-import { FaqSection } from "@/components/FaqSection";
+import { triggerFormNotification } from "@/lib/form-notifications";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -24,16 +24,15 @@ const Contact = () => {
     setErrorMessage("");
     try {
       const { error } = await supabase.from("contact_messages").insert([
-        { name: formData.name, email: formData.email, message: formData.message }
+        { name: formData.name, email: formData.email, message: formData.message },
       ]);
-      if (error) {
-        throw error;
-      }
+      if (error) throw error;
+      await triggerFormNotification({ type: "contact", ...formData });
       setSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setErrorMessage(err.message || "Failed to send message.");
+      setErrorMessage(err instanceof Error ? err.message : "Unable to submit your message. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -225,13 +224,6 @@ const Contact = () => {
             </div>
           </div>
         </section>
-
-        {/* FAQ Section */}
-        <FaqSection
-          title="Frequently Asked"
-          highlightText="Questions"
-          subtitle="Everything you need to know about our project consultation, delivery timelines, intellectual property, and 24/7 post-launch maintenance."
-        />
 
         <Footer />
       </div>

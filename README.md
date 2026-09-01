@@ -71,3 +71,14 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Form email notifications
+
+Contact and quote submissions are first saved to Supabase, then notify the business through the `send-form-notification` Edge Function using SMTPS (SMTP over TLS). Configure its secrets in Supabase; never add them to Vite `.env` files. Supabase Edge Functions block SMTP ports 25 and 587, so the SMTP provider must support implicit TLS on port 465:
+
+```sh
+supabase secrets set SMTP_HOST=smtp.your-provider.com SMTP_USERNAME=notifications@your-verified-domain.com SMTP_PASSWORD=your_smtp_password SMTP_FROM_EMAIL=notifications@your-verified-domain.com NOTIFICATION_RECIPIENT_EMAIL=alhakamsofts@gmail.com
+supabase functions deploy send-form-notification
+```
+
+Use an SMTP account that is authorized to send from `SMTP_FROM_EMAIL`; for Gmail, use an app password rather than your normal password. The function-specific example is at `supabase/functions/.env.example`.

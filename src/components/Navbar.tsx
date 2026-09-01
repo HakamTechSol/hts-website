@@ -513,43 +513,6 @@ const Navbar = () => {
               <Link to="/services" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Services
               </Link>
-              <details className="border-b border-slate-100 py-2">
-                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Industries</summary>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-3 text-sm text-slate-600">
-                  {industriesMegaMenu.map((industry) => (
-                    <Link key={industry.title} to="/services" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
-                      {industry.title}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-              <details className="border-b border-slate-100 py-2">
-                <summary className="cursor-pointer text-base font-bold text-slate-800 hover:text-[#0f6cbd]">Tools &amp; Technologies</summary>
-                <div className="space-y-4 pt-3 text-sm text-slate-600">
-                  {technologiesMegaMenu.map((group) => (
-                    <div key={group.category}>
-                      <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-slate-800">{group.category}</p>
-                      <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                        {group.items.map((item) => (
-                          <Link key={item} to="/services" onClick={() => setIsOpen(false)} className="text-left transition-colors hover:text-[#0f6cbd]">
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                      {group.category === "Marketing" && (
-                        <div className="mt-4">
-                          <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-slate-800">CMS</p>
-                          {CMS.map((item) => (
-                            <Link key={item} to="/services" onClick={() => setIsOpen(false)} className="block text-left transition-colors hover:text-[#0f6cbd]">
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </details>
               <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Portfolio
               </Link>
