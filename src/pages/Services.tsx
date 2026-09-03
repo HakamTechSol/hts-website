@@ -28,7 +28,7 @@ const Services = () => (
         <div className="absolute inset-0 bg-slate-950/80" aria-hidden="true" />
         <div className="container relative z-10 mx-auto max-w-5xl text-center">
           <span className="inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-sky-300">Full-spectrum engineering</span>
-          <h1 className="mt-5 text-3xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Technology services built for <span className="text-sky-400">real business growth.</span></h1>
+          <h1 className="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">Technology services built for <span className="text-sky-400">real business growth.</span></h1>
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-slate-200 sm:text-lg">From strategy and design through development, automation, launch, and scale—our teams build durable digital products around your goals.</p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link to="/quote"><Button size="lg" className="w-full rounded-full bg-[#0f6cbd] px-8 py-6 font-extrabold text-white hover:bg-blue-700 sm:w-auto">GET A FREE QUOTE <ArrowRight size={18} className="ml-2" /></Button></Link>

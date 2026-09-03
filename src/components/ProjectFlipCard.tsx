@@ -17,7 +17,7 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
     if (target.closest("a") || target.closest("button")) {
       return;
     }
-    if (window.innerWidth < 768) {
+    if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
       setIsFlipped(!isFlipped);
     }
   };
@@ -46,8 +46,11 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
             <span className="px-3 py-1 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold uppercase tracking-wide">
               {project.badge}
             </span>
-            <span className="text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+            <span className="flip-instruction flip-instruction--hover text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
               Hover to Flip ↻
+            </span>
+            <span className="flip-instruction flip-instruction--touch text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+              Touch to Flip ↻
             </span>
           </div>
 

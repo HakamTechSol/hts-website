@@ -53,6 +53,20 @@
 }
 
 @layer utilities {
+  .flip-instruction--touch {
+    display: none;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    .flip-instruction--hover {
+      display: none;
+    }
+
+    .flip-instruction--touch {
+      display: inline-flex;
+    }
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--hero-gradient);

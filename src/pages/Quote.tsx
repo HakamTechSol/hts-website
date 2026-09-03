@@ -106,7 +106,7 @@ const Quote = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
-                    <h2 className="text-xl font-extrabold text-slate-900">Request your estimate</h2>
+                    <h2 className="text-xl font-extrabold text-slate-900">Request your Estimate</h2>
                     <p className="mt-1 text-xs text-slate-500">Fields marked required help us prepare a more useful response.</p>
 
                     <div className="mt-6 grid gap-4 sm:grid-cols-2">

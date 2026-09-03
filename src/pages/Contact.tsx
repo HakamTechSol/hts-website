@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle, Bell } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, MessageCircle, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -190,32 +190,31 @@ const Contact = () => {
                   {/* Social Buttons Bar */}
                   <div className="flex items-center gap-3 pt-2">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/profile.php?id=100069162042893"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-[#0f6cbd] text-white flex items-center justify-center hover:scale-110 transition-all shadow-md"
                       aria-label="Facebook"
                     >
                       <Facebook size={18} />
                     </a>
                     <a
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:scale-110 transition-all shadow-md"
-                      aria-label="Twitter"
-                    >
-                      <Twitter size={18} />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:scale-110 transition-all shadow-md"
-                      aria-label="Instagram"
-                    >
-                      <Instagram size={18} />
-                    </a>
-                    <a
-                      href="#"
+                      href="https://www.linkedin.com/company/hakamtechsolofficial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:scale-110 transition-all shadow-md"
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={18} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/hakamtechsol/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:scale-110 transition-all shadow-md"
+                      aria-label="Instagram"
+                    >
+                      <Instagram size={18} />
                     </a>
                   </div>
                 </div>

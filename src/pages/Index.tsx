@@ -157,7 +157,8 @@ const Index = () => {
                   Featured Case Studies
                 </span>
                 <h2 className="mt-3 text-2xl font-extrabold text-slate-900 sm:text-4xl">
-                  Hover to Flip & Explore Real Client Projects
+                  <span className="flip-instruction flip-instruction--hover">Hover to Flip</span>
+                  <span className="flip-instruction flip-instruction--touch">Touch to Flip</span> & Explore Real Client Projects
                 </h2>
               </div>
               <Link to="/portfolio" className="text-sm font-extrabold text-[#0f6cbd] hover:underline flex items-center gap-1">
@@ -252,7 +253,7 @@ const Index = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-4xl">
             <div className="rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 p-8 sm:p-14 text-white text-center shadow-2xl space-y-6 border border-slate-800">
-              <span className="px-4 py-1.5 rounded-full bg-[#0f6cbd] text-white text-xs font-extrabold uppercase tracking-widest">
+              <span className="inline-flex max-w-full justify-center whitespace-normal px-4 py-1.5 text-center leading-relaxed rounded-full bg-[#0f6cbd] text-white text-xs font-extrabold uppercase tracking-widest">
                 Start Your Digital Transformation
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white">

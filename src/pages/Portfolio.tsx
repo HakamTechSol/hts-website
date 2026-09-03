@@ -131,7 +131,7 @@ const Portfolio: React.FC = () => {
           <div className="container mx-auto max-w-5xl">
             <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl border border-slate-800">
               <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-                <span className="px-4 py-1.5 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-widest border border-sky-500/30">
+                <span className="inline-flex max-w-full justify-center whitespace-normal px-4 py-1.5 text-center leading-relaxed rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-widest border border-sky-500/30">
                   Ready To Build Your Next Big Product?
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight text-white">

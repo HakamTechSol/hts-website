@@ -502,10 +502,6 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 240, damping: 25 }}
             className="fixed inset-y-0 right-0 top-16 z-50 w-[88vw] max-w-sm overflow-y-auto border-l border-slate-200 bg-white p-5 shadow-2xl lg:hidden sm:p-6"
           >
-            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
-              <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#0f6cbd]">Navigation</span>
-              <button type="button" onClick={() => setIsOpen(false)} className="rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-[#0f6cbd]" aria-label="Close navigation menu"><X size={20} /></button>
-            </div>
             <div className="flex flex-col gap-2">
               <Link to="/" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Home
