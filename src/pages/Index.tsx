@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { ProjectFlipCard } from "@/components/ProjectFlipCard";
 import { projectsData } from "@/data/projectsData";
 import webDevImage from "@/assets/web-dev.jpg";
@@ -83,6 +84,12 @@ const industriesList = [
 const Index = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="Custom Software Development | Web & Mobile App Development Agency"
+        description="HakamTechSol is a leading custom software development company specializing in web development, mobile app development, Shopify development, and digital marketing. Transform your business with our expert team."
+        keywords="custom software development, web development agency, mobile app development, Shopify development, React Native development, Flutter development, digital marketing, SEO services, SaaS development, UI/UX design, staff augmentation, enterprise software development"
+        canonicalUrl="https://hakamtechsol.com"
+      />
       <div className="min-h-screen bg-white text-slate-800">
         <Navbar />
 
@@ -99,11 +106,11 @@ const Index = () => {
                 </div> */}
 
                 <h1 className="max-w-6xl text-3xl font-extrabold leading-tight text-white sm:text-6xl">
-                  Design and Build your <span className="text-sky-400">Digital Reality</span> with Clarity.
+                  Custom Software Development & <span className="text-sky-400">Digital Solutions</span> for Business Growth
                 </h1>
 
                 <p className="max-w-4xl text-base leading-7 text-slate-200 sm:text-xl sm:leading-relaxed">
-                  HakamTechSol partners with ambitious teams globally to engineer web portals, mobile apps, SaaS platforms, and enterprise software.
+                  HakamTechSol partners with ambitious teams globally to engineer web portals, mobile apps, SaaS platforms, and enterprise software. Expert Shopify development, React Native, and Flutter services.
                 </p>
 
                 <div className="flex w-full max-w-sm flex-col gap-3 pt-2 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
@@ -158,7 +165,7 @@ const Index = () => {
                 </span>
                 <h2 className="mt-3 text-2xl font-extrabold text-slate-900 sm:text-4xl">
                   <span className="flip-instruction flip-instruction--hover">Hover to Flip</span>
-                  <span className="flip-instruction flip-instruction--touch">Touch to Flip</span> & Explore Real Client Projects
+                  <span className="flip-instruction flip-instruction--touch">Touch to Flip</span> & Explore Our Software Development Projects
                 </h2>
               </div>
               <Link to="/portfolio" className="text-sm font-extrabold text-[#0f6cbd] hover:underline flex items-center gap-1">

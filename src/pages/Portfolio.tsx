@@ -4,6 +4,7 @@ import { Search, Sparkles, Code2, Layers } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import { projectsData } from "@/data/projectsData";
 import { ProjectFlipCard } from "@/components/ProjectFlipCard";
 import portfolioBackgroundImage from "@/assets/portfolio-bg.jpg";
@@ -36,6 +37,12 @@ const Portfolio: React.FC = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Portfolio - Web Development & Mobile App Development Case Studies"
+        description="Explore HakamTechSol's portfolio of successful web development, mobile app development, and custom software projects. See our case studies and client success stories."
+        keywords="web development portfolio, mobile app development case studies, custom software development projects, Shopify development portfolio, React Native development portfolio, Flutter development projects, SaaS development case studies"
+        canonicalUrl="https://hakamtechsol.com/portfolio"
+      />
       <div className="min-h-screen bg-slate-50 text-slate-800">
         <Navbar />
         {/* Hero Header Section */}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import teamImage from "@/assets/team.jpg";
 import heroImage from "@/assets/hero-tech.jpg";
 
@@ -30,6 +31,12 @@ const stats = [
 const About = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="About Us - Custom Software Development Company"
+        description="Learn about HakamTechSol - a leading custom software development company with 100+ projects delivered, 5+ years of experience, and expertise in web development, mobile app development, and digital transformation."
+        keywords="software development company, about HakamTechSol, custom software development team, web development agency, mobile app development company, digital transformation services, technology consulting"
+        canonicalUrl="https://hakamtechsol.com/about"
+      />
       <div className="min-h-screen bg-white text-slate-700">
         <Navbar />
         {/* Animated Hero Section */}

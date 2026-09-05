@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { triggerFormNotification } from "@/lib/form-notifications";
 
@@ -51,6 +52,12 @@ const Quote = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Get a Free Quote - Custom Software Development Services"
+        description="Request a free quote for custom software development, web development, mobile app development, and digital marketing services. Get your project scope and timeline within 24 hours."
+        keywords="free software development quote, custom software development pricing, web development cost estimate, mobile app development quote, digital marketing services pricing, Shopify development cost, staff augmentation rates"
+        canonicalUrl="https://hakamtechsol.com/quote"
+      />
       <div className="min-h-screen bg-slate-50 text-slate-800">
         <Navbar />
 

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import servicesHeroBackground from "@/assets/services-hero-background.jpg";
 import { ServiceIllustration, ServiceIllustrationType } from "@/components/ServiceIllustration";
 
@@ -21,6 +22,12 @@ const services: { illustration: ServiceIllustrationType; title: string; subtitle
 
 const Services = () => (
   <PageTransition>
+    <SEO 
+      title="Technology Services - Custom Software Development | Web & Mobile App Development"
+      description="Comprehensive technology services including custom software development, web development, mobile app development, Shopify development, AI & automation, digital marketing, and staff augmentation. Transform your business with HakamTechSol's expert solutions."
+      keywords="custom software development, web development services, mobile app development, Shopify development agency, React Native development, Flutter development, AI automation services, digital marketing services, SEO services, SaaS development, UI/UX design services, staff augmentation, enterprise software development"
+      canonicalUrl="https://hakamtechsol.com/services"
+    />
     <div className="min-h-screen bg-white text-slate-800">
       <Navbar />
       <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 px-4 pb-20 pt-28 text-white sm:px-6 md:pt-36 lg:px-8 lg:pb-28">
@@ -28,8 +35,8 @@ const Services = () => (
         <div className="absolute inset-0 bg-slate-950/80" aria-hidden="true" />
         <div className="container relative z-10 mx-auto max-w-5xl text-center">
           <span className="inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-sky-300">Full-spectrum engineering</span>
-          <h1 className="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">Technology services built for <span className="text-sky-400">real business growth.</span></h1>
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-slate-200 sm:text-lg">From strategy and design through development, automation, launch, and scale—our teams build durable digital products around your goals.</p>
+          <h1 className="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">Custom Software Development & <span className="text-sky-400">Digital Marketing Services</span></h1>
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-slate-200 sm:text-lg">Expert web development, mobile app development, Shopify development, AI automation, and digital marketing services for US, UK, Canada, and Australia markets.</p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link to="/quote"><Button size="lg" className="w-full rounded-full bg-[#0f6cbd] px-8 py-6 font-extrabold text-white hover:bg-blue-700 sm:w-auto">GET A FREE QUOTE <ArrowRight size={18} className="ml-2" /></Button></Link>
             <Link to="/portfolio"><Button size="lg" variant="outline" className="w-full rounded-full border-slate-600 bg-slate-900/70 px-8 py-6 font-bold text-white hover:bg-slate-800 sm:w-auto">Explore Case Studies</Button></Link>
@@ -39,7 +46,7 @@ const Services = () => (
 
       <section className="border-b border-slate-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="mx-auto mb-14 max-w-2xl text-center"><span className="rounded-full bg-sky-100 px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-widest text-[#0f6cbd]">Our core services</span><h2 className="mt-4 text-3xl font-extrabold text-slate-900 sm:text-5xl">End-to-end technology capabilities</h2><p className="mt-3 text-sm text-slate-600">Choose the expertise that fits your next product, platform, or growth initiative.</p></div>
+          <div className="mx-auto mb-14 max-w-2xl text-center"><span className="rounded-full bg-sky-100 px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-widest text-[#0f6cbd]">Our core services</span><h2 className="mt-4 text-3xl font-extrabold text-slate-900 sm:text-5xl">Custom Software Development & Digital Services</h2><p className="mt-3 text-sm text-slate-600">Choose the expertise that fits your next product, platform, or growth initiative. Shopify, React Native, Flutter, and more.</p></div>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => {
               return <article key={service.title} className="flex min-h-[360px] flex-col rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl">

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { triggerFormNotification } from "@/lib/form-notifications";
 
@@ -40,6 +41,12 @@ const Contact = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Contact Us - Get a Free Quote | Software Development Services"
+        description="Contact HakamTechSol for custom software development, web development, mobile app development, and digital marketing services. Get a free quote for your project today."
+        keywords="contact software development company, get quote for software development, web development consultation, mobile app development quote, digital marketing services contact, custom software development pricing"
+        canonicalUrl="https://hakamtechsol.com/contact"
+      />
       <div className="min-h-screen bg-[#0f6cbd] text-slate-800 flex flex-col justify-between">
         <Navbar />
 
