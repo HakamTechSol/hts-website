@@ -24,7 +24,7 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
 
   return (
     <div
-      className="group relative w-full h-[500px] sm:h-[530px] [perspective:1000px] cursor-pointer"
+      className="group relative w-full h-[480px] sm:h-[510px] lg:h-[540px] [perspective:1000px] cursor-pointer select-none [-webkit-tap-highlight-color:transparent]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
       onClick={handleCardClick}
@@ -37,12 +37,12 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
       >
         {/* FRONT SIDE */}
         <div
-          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-3xl bg-white p-5 flex flex-col justify-between overflow-hidden transition-opacity duration-300 ${
+          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-3xl bg-white p-4 sm:p-5 flex flex-col justify-between overflow-hidden transition-opacity duration-300 ${
             isFlipped ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"
           }`}
         >
           {/* Top Header Tag */}
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="px-3 py-1 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold uppercase tracking-wide">
               {project.badge}
             </span>
@@ -50,7 +50,7 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
               Hover to Flip ↻
             </span>
             <span className="flip-instruction flip-instruction--touch text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
-              Touch to Flip ↻
+              View Details
             </span>
           </div>
 
@@ -62,7 +62,7 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
 
         {/* BACK SIDE (Unified Blue & White Theme) */}
         <div
-          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-3xl bg-gradient-to-br from-sky-50/95 via-white to-blue-50/90 p-6 sm:p-7 flex flex-col justify-between border-2 border-sky-300/80 shadow-2xl overflow-y-auto transition-opacity duration-300 z-30 ${
+          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-3xl bg-gradient-to-br from-sky-50/95 via-white to-blue-50/90 p-5 sm:p-7 flex flex-col justify-between border-2 border-sky-300/80 shadow-2xl overflow-y-auto [-webkit-overflow-scrolling:touch] transition-opacity duration-300 z-30 ${
             isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
         >
@@ -82,7 +82,7 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
 
             {/* Title & Paragraph */}
             <div className="space-y-1.5">
-              <h3 className="text-xl font-extrabold text-slate-900 leading-snug">
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 leading-snug">
                 {project.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-normal line-clamp-4 sm:line-clamp-5">
@@ -103,26 +103,26 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
           <div className="space-y-3 pt-3 border-t border-sky-200">
             <div className="grid grid-cols-3 gap-2 text-center">
               <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-sm sm:text-base font-extrabold text-slate-900">
+                <div className="text-xs sm:text-base font-extrabold text-slate-900">
                   {project.metrics[0]?.value || "500K+"}
                 </div>
-                <div className="text-[9px] text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   Active Users
                 </div>
               </div>
               <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-sm sm:text-base font-extrabold text-slate-900">
+                <div className="text-xs sm:text-base font-extrabold text-slate-900">
                   {project.metrics[1]?.value || "4.9/5.0"}
                 </div>
-                <div className="text-[9px] text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   User Rating
                 </div>
               </div>
               <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-sm sm:text-base font-extrabold text-slate-900">
+                <div className="text-xs sm:text-base font-extrabold text-slate-900">
                   {project.metrics[2]?.value || "60%"}
                 </div>
-                <div className="text-[9px] text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   Retention Rate
                 </div>
               </div>

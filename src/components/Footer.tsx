@@ -83,13 +83,13 @@ const Footer = () => {
               <li className="flex items-start gap-2.5">
                 <Mail size={16} className="text-[#f97316] shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
-                  <a href="mailto:alhakamsofts@gmail.com" className="break-all transition-colors hover:text-[#f97316]">alhakamsofts@gmail.com</a>
-                  <a href="mailto:info@hakamtechsol.com" className="break-all transition-colors hover:text-[#f97316]">info@hakamtechsol.com</a>
+
+                  <a href="mailto:contact@hakamtechsol.com" className="break-all transition-colors hover:text-[#f97316]">contact@hakamtechsol.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone size={16} className="text-[#f97316] shrink-0 mt-0.5" />
-                <span>+92 309 2271214<br />+92 320 123 5249</span>
+                <span>+92 309 2271214</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-[#f97316] shrink-0 mt-0.5" />

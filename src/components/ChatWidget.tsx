@@ -54,7 +54,7 @@ const ChatWidget = () => {
                 </Button>
               </a>
 
-              <a href="mailto:info@hakamtechsol.com" className="block">
+              <a href="mailto:contact@hakamtechsol.com" className="block">
                 <Button variant="outline" className="w-full gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                   <Send size={16} />
                   Send Email

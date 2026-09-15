@@ -180,17 +180,17 @@ const Contact = () => {
                   <div className="space-y-3 text-xs sm:text-sm text-slate-600">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-[#0f6cbd] shrink-0 mt-0.5" />
-                      <span className="font-medium">Gulshan-e-Iqbal Block 6, Karachi, Pakistan</span>
+                      <span className="font-medium">Karachi IT Park, Rashid Minhas Road, Gulshan-e-Jamal, Karachi, Pakistan</span>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Phone className="w-4 h-4 text-[#0f6cbd] shrink-0" />
-                      <span className="font-medium">+92 309 2271214 / +92 320 123 5249</span>
+                      <span className="font-medium">+92 309 2271214</span>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Mail className="w-4 h-4 text-[#0f6cbd] shrink-0" />
-                      <span className="font-medium">alhakamsofts@gmail.com</span>
+                      <span className="font-medium">contact@hakamtechsol.com</span>
                     </div>
                   </div>
 
