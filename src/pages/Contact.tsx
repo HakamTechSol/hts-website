@@ -8,29 +8,36 @@ import PageTransition from "@/components/PageTransition";
 import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { triggerFormNotification } from "@/lib/form-notifications";
+import PhoneInputField from "@/components/PhoneInputField";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [phoneValid, setPhoneValid] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!phoneValid) {
+      setErrorMessage("Please enter a valid phone number.");
+      return;
+    }
     setLoading(true);
     setErrorMessage("");
     try {
       const { error } = await supabase.from("contact_messages").insert([
-        { name: formData.name, email: formData.email, message: formData.message },
+        { name: formData.name, email: formData.email, phone: formData.phone, message: formData.message },
       ]);
       if (error) throw error;
       await triggerFormNotification({ type: "contact", ...formData });
       setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err: unknown) {
       console.error(err);
       setErrorMessage(err instanceof Error ? err.message : "Unable to submit your message. Please try again.");
@@ -113,6 +120,16 @@ const Contact = () => {
                           className="w-full px-5 py-3.5 rounded-2xl bg-slate-100/90 border-0 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] transition-all font-medium"
                         />
                       </div>
+
+                      {/* Phone Input */}
+                      <PhoneInputField
+                        variant="contact"
+                        label="Phone / WhatsApp"
+                        onChange={(fullNumber, isValid) => {
+                          setFormData((prev) => ({ ...prev, phone: fullNumber }));
+                          setPhoneValid(isValid);
+                        }}
+                      />
 
                       {/* Message Input */}
                       <div>

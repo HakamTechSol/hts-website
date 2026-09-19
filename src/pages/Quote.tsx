@@ -8,6 +8,7 @@ import PageTransition from "@/components/PageTransition";
 import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { triggerFormNotification } from "@/lib/form-notifications";
+import PhoneInputField from "@/components/PhoneInputField";
 
 const Quote = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -15,6 +16,8 @@ const Quote = () => {
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [phoneValue, setPhoneValue] = useState("");
+  const [phoneValid, setPhoneValid] = useState(true);
 
   useEffect(() => {
     setService(searchParams.get("service") ?? "");
@@ -22,13 +25,17 @@ const Quote = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!phoneValid) {
+      setErrorMessage("Please enter a valid phone number.");
+      return;
+    }
     setLoading(true);
     setErrorMessage("");
     try {
       const formData = new FormData(event.currentTarget);
       const name = String(formData.get("name") ?? "");
       const email = String(formData.get("email") ?? "");
-      const phone = String(formData.get("phone") ?? "");
+      const phone = phoneValue;
       const details = String(formData.get("details") ?? "");
       const { error } = await supabase.from("quote_requests").insert([
         {
@@ -123,9 +130,16 @@ const Quote = () => {
                       <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Work email
                         <input required name="email" type="email" placeholder="jane@company.com" className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm normal-case tracking-normal text-slate-800 outline-none transition focus:ring-2 focus:ring-[#0f6cbd]" />
                       </label>
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone / WhatsApp
-                        <input name="phone" type="tel" placeholder="+92 300 0000000" className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm normal-case tracking-normal text-slate-800 outline-none transition focus:ring-2 focus:ring-[#0f6cbd]" />
-                      </label>
+                      <div>
+                        <PhoneInputField
+                          variant="quote"
+                          label="Phone / WhatsApp"
+                          onChange={(fullNumber, isValid) => {
+                            setPhoneValue(fullNumber);
+                            setPhoneValid(isValid);
+                          }}
+                        />
+                      </div>
                       <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Service required
                         <select name="service" value={service} onChange={(event) => setService(event.target.value)} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm normal-case tracking-normal text-slate-800 outline-none transition focus:ring-2 focus:ring-[#0f6cbd]">
                           <option value="" disabled>Select a service</option>
