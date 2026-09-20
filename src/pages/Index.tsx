@@ -10,6 +10,7 @@ import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { ProjectFlipCard } from "@/components/ProjectFlipCard";
+import ClientLogoMarquee from "@/components/ClientLogoMarquee";
 import { projectsData } from "@/data/projectsData";
 import webDevImage from "@/assets/web-dev.jpg";
 import mobileDevImage from "@/assets/mobile-dev.jpg";
@@ -154,6 +155,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <ClientLogoMarquee />
 
         {/* 2. Featured Case Studies Section (With 3D Card Flip Effect!) */}
         <section className="border-b border-slate-200 bg-slate-50 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
