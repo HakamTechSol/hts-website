@@ -53,26 +53,29 @@ const Footer = () => {
             <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li><Link to="/" className="hover:text-[#f97316] transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-[#f97316] transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Services</Link></li>
+              <li><Link to="/insights" className="hover:text-[#f97316] transition-colors">Insights</Link></li>
               <li><Link to="/portfolio" className="hover:text-[#f97316] transition-colors">Portfolio</Link></li>
               <li><Link to="/contact" className="hover:text-[#f97316] transition-colors">Contact Us</Link></li>
               <li><Link to="/quote" className="hover:text-[#f97316] transition-colors">Get a Quote</Link></li>
               <li><Link to="/faq" className="hover:text-[#f97316] transition-colors">FAQ</Link></li>
-          </ul>
+              <li><Link to="/privacy-policy" className="hover:text-[#f97316] transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-[#f97316] transition-colors">Terms of Services</Link></li>
+            </ul>
           </div>
 
           {/* Core Services */}
           <div>
-            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-4">Solutions</h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Mobile App Development</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Custom ERP & Software</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Web Development & Portals</Link></li>
+            <h4 className="font-extrabold text-white text-sm uppercase tracking-wider mb-4">Services</h4>
+            <ul className="space-y-2 text-xs text-slate-400">
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">AI & Automations</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Staff Augmentation</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Mobile App Development</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Custom Software Development</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Web Development & Portals</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">CMS Development</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Digital Marketing</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Graphic Designing</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Social Media Marketing</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Staff Augmentation</Link></li>
             </ul>
           </div>
 
@@ -93,19 +96,15 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-[#f97316] shrink-0 mt-0.5" />
-                <span>Karachi IT Park, Rashid Minhas Road, Gulshan-e-Jamal.</span>
+                <span>Karachi IT Park, Gulshan-e-Jamal, Rashid Minhas Road, Karachi, Pakistan.</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex items-center justify-center text-xs text-slate-500">
           <p>© {currentYear} HakamTechSol. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link to="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

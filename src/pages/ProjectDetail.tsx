@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Sparkles, Send, Check } from "luci
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import { getProjectById, projectArchitectures, projectsData } from "@/data/projectsData";
 import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { ProjectMockupFrame } from "@/components/ProjectMockupFrame";
@@ -15,11 +16,10 @@ const ProjectDetail: React.FC = () => {
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const project = getProjectById(id || "");
-
   if (!project) {
     return (
       <PageTransition>
+        <SEO title="Case Study Not Found" description="The requested project case study could not be found." noindex={true} />
         <div className="min-h-screen bg-slate-50 flex flex-col justify-between">
           <Navbar />
           <div className="container mx-auto px-4 py-32 text-center">
@@ -41,6 +41,11 @@ const ProjectDetail: React.FC = () => {
 
   return (
     <PageTransition>
+      <SEO
+        title={`${project.title} - Case Study`}
+        description={project.subtitle}
+        canonicalUrl={`https://hakamtechsol.com/portfolio/${project.id}`}
+      />
       <div className="min-h-screen bg-white text-slate-800">
         <Navbar />
 

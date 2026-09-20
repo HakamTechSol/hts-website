@@ -2,6 +2,7 @@ import { ArrowRight, Award, BrainCircuit, Cloud, Heart, Lightbulb, Rocket, Smart
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/team.jpg";
 
 const stats = [
@@ -20,6 +21,11 @@ const values = [
 
 const Insights = () => (
   <PageTransition>
+    <SEO
+      title="Insights"
+      description="Explore technical insights, company values, and digital innovation articles from HakamTechSol."
+      canonicalUrl="https://hakamtechsol.com/insights"
+    />
     <div className="min-h-screen overflow-hidden bg-white text-slate-800">
       <Navbar />
 

@@ -13,7 +13,7 @@ export const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <article className="relative grid grid-cols-1 items-center gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-lg sm:grid-cols-[180px_1fr] sm:gap-9 sm:p-8">
       <div className={`mx-auto aspect-square w-24 overflow-hidden rounded-full bg-sky-50 sm:w-44 ${member.imageHasFrame ? "border-0 shadow-none" : "border-4 border-[#0f6cbd] shadow-md"}`}>
-        <img src={member.image} alt={`${member.name}, ${member.role}`} className={`h-full w-full object-center brightness-[1.03] contrast-[1.04] saturate-[1.03] ${member.imageHasFrame ? "object-contain" : "object-cover"}`} />
+        <img src={member.image} alt={`${member.name}, ${member.role}`} className={`h-full w-full ${member.imagePosition || "object-center"} brightness-[1.03] contrast-[1.04] saturate-[1.03] ${member.imageHasFrame ? "object-contain" : "object-cover"}`} />
       </div>
       <div>
         <h2 className="text-xl font-extrabold leading-tight text-[#0f5c99] sm:text-3xl">{member.name}</h2>

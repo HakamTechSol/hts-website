@@ -449,14 +449,10 @@ const Navbar = () => {
                       <ul className="space-y-1.5 text-xs text-slate-600">
                         {group.items.map((item) => (
                           <li key={item}>
-                            <Link
-                              to="/services"
-                              onClick={() => setActiveDropdown(null)}
-                              className="inline-flex items-center gap-1.5 text-left transition-colors hover:text-[#0f6cbd] group"
-                            >
-                              <span className="text-slate-400 transition-colors group-hover:text-[#0f6cbd]">›</span>
+                            <div className="inline-flex items-center gap-1.5 text-left">
+                              <span className="text-slate-400">›</span>
                               <span>{item}</span>
-                            </Link>
+                            </div>
                           </li>
                         ))}
                       </ul>
@@ -466,10 +462,10 @@ const Navbar = () => {
                           <ul className="space-y-1.5 text-xs text-slate-600">
                             {CMS.map((item) => (
                               <li key={item}>
-                              <Link to="/services" onClick={() => setActiveDropdown(null)} className="inline-flex items-center gap-1.5 text-left transition-colors hover:text-[#0f6cbd] group">
-                                <span className="text-slate-400 transition-colors group-hover:text-[#0f6cbd]">›</span>
-                                <span>{item}</span>
-                              </Link>
+                                <div className="inline-flex items-center gap-1.5 text-left">
+                                  <span className="text-slate-400">›</span>
+                                  <span>{item}</span>
+                                </div>
                               </li>
                             ))}
                           </ul>
@@ -509,14 +505,14 @@ const Navbar = () => {
               <Link to="/services" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Services
               </Link>
+              <Link to="/insights" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
+                Insights
+              </Link>
               <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Portfolio
               </Link>
               <Link to="/team" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
                 Team
-              </Link>
-              <Link to="/insights" onClick={() => setIsOpen(false)} className="text-base font-bold text-slate-800 hover:text-[#0f6cbd] py-2 border-b border-slate-100">
-                Insights
               </Link>
               <Link to="/quote" onClick={() => setIsOpen(false)}>
                 <Button className="w-full bg-[#0f6cbd] hover:bg-blue-700 text-white font-extrabold mt-4 py-3 rounded-full shadow-md">

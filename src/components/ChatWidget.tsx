@@ -53,13 +53,26 @@ const ChatWidget = () => {
                   WhatsApp Us
                 </Button>
               </a>
-
-              <a href="mailto:contact@hakamtechsol.com" className="block">
-                <Button variant="outline" className="w-full gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                  <Send size={16} />
-                  Send Email
-                </Button>
-              </a>
+<Button
+  type="button"
+  variant="outline"
+  className="w-full gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground cursor-pointer"
+  onClick={(e) => {
+    e.stopPropagation(); // Parent motion div ko click event intercept karne se rokega
+    
+    const email = "contact@hakamtechsol.com";
+    const subject = encodeURIComponent("Project Inquiry");
+    const body = encodeURIComponent("Hi HakamTechSol team, I would like to discuss a project.");
+    
+    // Direct Gmail Web Compose link (browser par 100% chalega)
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  }}
+>
+  <Send size={16} />
+  Send Email
+</Button>
             </div>
           </motion.div>
         )}

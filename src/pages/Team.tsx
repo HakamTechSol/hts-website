@@ -1,14 +1,20 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 import { TeamCard } from "@/components/TeamCard";
 import { teamMembers } from "@/data/teamData";
 
-const teamOrder = ["Arbaz Ali", "Hunain Haider", "Sanawar Hussain Jaffri", "Mustufa Ali", "Talha Khan"];
+const teamOrder = ["Arbaz Ali", "Fahad Mujtaba", "Hunain Haider", "Sanawar Hussain Jaffri", "Mustufa Ali", "Talha Khan"];
 const orderedTeamMembers = [...teamMembers].sort((a, b) => teamOrder.indexOf(a.name) - teamOrder.indexOf(b.name));
 
 const Team = () => (
   <PageTransition>
+    <SEO
+      title="Our Team"
+      description="Meet the leadership and engineering team behind HakamTechSol."
+      canonicalUrl="https://hakamtechsol.com/team"
+    />
     <div className="min-h-screen bg-white text-slate-800">
       <Navbar />
       <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-white via-sky-50 to-blue-100/70 pb-12 pt-28 md:pb-16 md:pt-36">

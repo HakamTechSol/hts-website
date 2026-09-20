@@ -85,7 +85,7 @@ const Index = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Custom Software Development | Web & Mobile App Development Agency"
+        title="HakamTechSol | Custom Software & App Development"
         description="HakamTechSol is a leading custom software development company specializing in web development, mobile app development, Shopify development, and digital marketing. Transform your business with our expert team."
         keywords="custom software development, web development agency, mobile app development, Shopify development, React Native development, Flutter development, digital marketing, SEO services, SaaS development, UI/UX design, staff augmentation, enterprise software development"
         canonicalUrl="https://hakamtechsol.com"
@@ -215,7 +215,7 @@ const Index = () => {
         </section>
 
         {/* 4. Industries We Serve */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
+        <section id="industries" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
               <span className="px-3.5 py-1.5 rounded-full bg-sky-500/20 text-sky-400 text-xs font-extrabold uppercase tracking-widest border border-sky-500/30">

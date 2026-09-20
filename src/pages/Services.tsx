@@ -23,7 +23,7 @@ const services: { illustration: ServiceIllustrationType; title: string; subtitle
 const Services = () => (
   <PageTransition>
     <SEO 
-      title="Technology Services - Custom Software Development | Web & Mobile App Development"
+      title="Services"
       description="Comprehensive technology services including custom software development, web development, mobile app development, Shopify development, AI & automation, digital marketing, and staff augmentation. Transform your business with HakamTechSol's expert solutions."
       keywords="custom software development, web development services, mobile app development, Shopify development agency, React Native development, Flutter development, AI automation services, digital marketing services, SEO services, SaaS development, UI/UX design services, staff augmentation, enterprise software development"
       canonicalUrl="https://hakamtechsol.com/services"

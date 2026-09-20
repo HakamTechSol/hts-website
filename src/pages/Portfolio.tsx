@@ -38,7 +38,7 @@ const Portfolio: React.FC = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Portfolio - Web Development & Mobile App Development Case Studies"
+        title="Portfolio"
         description="Explore HakamTechSol's portfolio of successful web development, mobile app development, and custom software projects. See our case studies and client success stories."
         keywords="web development portfolio, mobile app development case studies, custom software development projects, Shopify development portfolio, React Native development portfolio, Flutter development projects, SaaS development case studies"
         canonicalUrl="https://hakamtechsol.com/portfolio"

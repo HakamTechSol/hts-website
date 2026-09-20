@@ -60,7 +60,7 @@ const Quote = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Get a Free Quote - Custom Software Development Services"
+        title="Get a Quote"
         description="Request a free quote for custom software development, web development, mobile app development, and digital marketing services. Get your project scope and timeline within 24 hours."
         keywords="free software development quote, custom software development pricing, web development cost estimate, mobile app development quote, digital marketing services pricing, Shopify development cost, staff augmentation rates"
         canonicalUrl="https://hakamtechsol.com/quote"
@@ -132,6 +132,7 @@ const Quote = () => {
                       </label>
                       <div>
                         <PhoneInputField
+                          required
                           variant="quote"
                           label="Phone / WhatsApp"
                           onChange={(fullNumber, isValid) => {

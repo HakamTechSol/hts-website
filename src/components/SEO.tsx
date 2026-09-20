@@ -21,7 +21,7 @@ const SEO = ({
   noindex = false,
   schema,
 }: SEOProps) => {
-  const fullTitle = `${title} | HakamTechSol`;
+  const fullTitle = title.includes("HakamTechSol") ? title : `${title} | HakamTechSol`;
   
   return (
     <Helmet>

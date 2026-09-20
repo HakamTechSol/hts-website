@@ -2,9 +2,15 @@ import Footer from "@/components/Footer";
 import { FaqSection } from "@/components/FaqSection";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 
 const Faq = () => (
   <PageTransition>
+    <SEO
+      title="FAQ"
+      description="Frequently Asked Questions about HakamTechSol services, processes, and tech solutions."
+      canonicalUrl="https://hakamtechsol.com/faq"
+    />
     <div className="min-h-screen bg-white text-slate-800">
       <Navbar />
       <main>

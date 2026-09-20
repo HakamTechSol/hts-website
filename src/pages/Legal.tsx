@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
+import SEO from "@/components/SEO";
 
 type LegalProps = {
   type: "privacy" | "terms";
@@ -104,7 +105,7 @@ const privacySections: LegalSection[] = [
     bullets: [
       "Email: contact@hakamtechsol.com",
       "Phone: +92 309 2271214",
-      "Address: Karachi IT Park, Rashid Minhas Road, Gulshan-e-Jamal.",
+      "Address: Karachi IT Park, Gulshan-e-Jamal, Rashid Minhas Road, Karachi, Pakistan",
     ],
   },
 ];
@@ -189,31 +190,31 @@ const termsSections: LegalSection[] = [
   {
     heading: "13. Governing Law & Jurisdiction",
     paragraphs: [
-      "These Terms of Service are governed by the laws applicable in Pakistan. Any disputes arising out of or relating to these terms or our services shall be resolved under the jurisdiction of the competent courts of Karachi, Pakistan, unless otherwise agreed in writing.",
+      "These Terms of Services are governed by the laws applicable in Pakistan. Any disputes arising out of or relating to these terms or our services shall be resolved under the jurisdiction of the competent courts of Karachi, Pakistan, unless otherwise agreed in writing.",
     ],
   },
   {
     heading: "14. Changes to These Terms",
     paragraphs: [
-      "We may update these Terms of Service from time to time. The latest version will always be posted on this page with a revised 'Last updated' date. Your continued use of the website after an update means you accept the revised terms.",
+      "We may update these Terms of Services from time to time. The latest version will always be posted on this page with a revised 'Last updated' date. Your continued use of the website after an update means you accept the revised terms.",
     ],
   },
   {
     heading: "15. Contact Information",
     paragraphs: [
-      "If you have questions about these Terms of Service or would like to discuss a project, please contact us:",
+      "If you have questions about these Terms of Services or would like to discuss a project, please contact us:",
     ],
     bullets: [
       "Email: contact@hakamtechsol.com",
       "Phone: +92 309 2271214",
-      "Address: Karachi IT Park, Rashid Minhas Road, Gulshan-e-Jamal.",
+      "Address: Karachi IT Park, Gulshan-e-Jamal, Rashid Minhas Road, Karachi, Pakistan",
     ],
   },
 ];
 
 const Legal = ({ type }: LegalProps) => {
   const isPrivacy = type === "privacy";
-  const title = isPrivacy ? "Privacy Policy" : "Terms of Service";
+  const title = isPrivacy ? "Privacy Policy" : "Terms of Services";
   const intro = isPrivacy
     ? "This policy explains how HakamTechSol collects, uses, and protects your information when you visit our website, contact our team, or use our services."
     : "These terms explain the rules for using the HakamTechSol website and engaging our software development and digital services.";
@@ -222,6 +223,7 @@ const Legal = ({ type }: LegalProps) => {
 
   return (
     <PageTransition>
+      <SEO title={title} description={intro} canonicalUrl={`https://hakamtechsol.com/${isPrivacy ? "privacy-policy" : "terms"}`} />
       <div className="min-h-screen bg-slate-50 text-slate-800">
         <Navbar />
         <main className="px-4 pb-20 pt-28 sm:px-6 md:pt-36 lg:px-8 lg:pb-28">
@@ -237,7 +239,7 @@ const Legal = ({ type }: LegalProps) => {
                 Last updated: {lastUpdated}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                HakamTechSol, Gulshan-e-Iqbal Block 6, Karachi, Pakistan. For questions about this{" "}
+                HakamTechSol, Karachi IT Park, Gulshan-e-Jamal, Rashid Minhas Road, Karachi, Pakistan. For questions about this{" "}
                 {isPrivacy ? "policy" : "agreement"}, email us at{" "}
                 <a href="mailto:contact@hakamtechsol.com" className="font-semibold text-[#0f6cbd] hover:underline">
                   contact@hakamtechsol.com

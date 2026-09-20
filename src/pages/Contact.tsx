@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Contact Us - Get a Free Quote | Software Development Services"
+        title="Contact Us"
         description="Contact HakamTechSol for custom software development, web development, mobile app development, and digital marketing services. Get a free quote for your project today."
         keywords="contact software development company, get quote for software development, web development consultation, mobile app development quote, digital marketing services contact, custom software development pricing"
         canonicalUrl="https://hakamtechsol.com/contact"
@@ -197,7 +197,7 @@ const Contact = () => {
                   <div className="space-y-3 text-xs sm:text-sm text-slate-600">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-[#0f6cbd] shrink-0 mt-0.5" />
-                      <span className="font-medium">Karachi IT Park, Rashid Minhas Road, Gulshan-e-Jamal, Karachi, Pakistan</span>
+                      <span className="font-medium">Karachi IT Park, Gulshan-e-Jamal, Rashid Minhas Road, Karachi, Pakistan</span>
                     </div>
 
                     <div className="flex items-center gap-3">

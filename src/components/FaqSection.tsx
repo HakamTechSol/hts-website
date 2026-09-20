@@ -1,28 +1,50 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
 interface FaqItem {
   question: string;
   tag: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 const defaultFaqs: FaqItem[] = [
   {
     question: "What services does HakamTechSol provide?",
     tag: "Web • Mobile • SaaS • E-commerce • Marketing",
-    answer: "We deliver end-to-end digital solutions: custom software development, web application development, mobile apps (Flutter, React Native, and FlutterFlow), SaaS platforms, Shopify & e-commerce stores, AI and workflow automation, UI/UX design, staff augmentation, and performance marketing."
+    answer: (
+      <>
+        We deliver end-to-end digital solutions: custom software development, web application development, mobile apps (Flutter, React Native, and FlutterFlow), SaaS platforms, Shopify & e-commerce stores, AI and workflow automation, UI/UX design, staff augmentation, and performance marketing. You can check our services by visiting{" "}
+        <Link to="/services" className="font-bold underline text-white hover:text-sky-200 transition-colors">
+          Our Services 
+        </Link>Page.
+      </>
+    )
   },
   {
     question: "Which industries do you work with?",
     tag: "Real Estate • Healthcare • EdTech • Retail • Sports",
-    answer: "We work across many sectors including real estate, healthcare and clinical systems, education and e-learning, e-commerce and retail, sports and analytics, hospitality, manufacturing, and financial services. Our portfolio includes property management platforms, hospital management systems, learning portals, loyalty apps, and operations dashboards."
+    answer: (
+      <>
+        We work across many sectors including real estate, healthcare and clinical systems, education and e-learning, e-commerce and retail, sports and analytics, hospitality, manufacturing, and financial services. Our portfolio includes property management platforms, hospital management systems, learning portals, loyalty apps, and operations dashboards. You can check our industries by visiting{" "}
+        <a href="/#industries" className="font-bold underline text-white hover:text-sky-200 transition-colors">
+          Industries We Transform
+        </a>.
+      </>
+    )
   },
   {
     question: "How much does a custom software or app development project cost?",
     tag: "Scope-Based Pricing • Fixed Quotes",
-    answer: "Cost depends on the scope, features, platform (web, iOS, Android, or all), integrations, and timeline. We prepare a detailed written proposal after a free discovery call and technical assessment, with a fixed, transparent quote — no hidden fees. Share your requirements through our quote form and we'll respond within 24 hours."
+    answer: (
+      <>
+        Cost depends on the scope, features, platform (web, iOS, Android, or all), integrations, and timeline. We prepare a detailed written proposal after a free discovery call and technical assessment, with a fixed, transparent quote — no hidden fees. Share your requirements through our {" "}
+        <Link to="/quote" className="font-bold underline text-white hover:text-sky-200 transition-colors">
+           Get A Quote
+        </Link> form and we'll respond within 24 hours.
+      </>
+    )
   },
   {
     question: "How long does a typical project take?",
@@ -34,11 +56,7 @@ const defaultFaqs: FaqItem[] = [
     tag: "React • Laravel • Flutter • Node.js • .NET",
     answer: "We choose the right stack for each project. Commonly we use React, React Native, Node.js, and TypeScript for dynamic web and cross-platform apps; Laravel, PHP, and MySQL for robust backends; Flutter and FlutterFlow for mobile; .NET for enterprise systems; and Firebase, Supabase, and cloud services for real-time features and AI integrations."
   },
-  {
-    question: "Will I own the source code and intellectual property?",
-    tag: "Full Code Ownership • NDA Protected",
-    answer: "Yes. Upon completion and final payment, 100% of the source code, design assets, database schemas, and intellectual property rights created specifically for your project are fully transferred to your company. Pre-existing frameworks and open-source libraries we use remain under their original licenses."
-  },
+
   {
     question: "Do you sign NDAs before discussing a project?",
     tag: "Strict Non-Disclosure Agreements",

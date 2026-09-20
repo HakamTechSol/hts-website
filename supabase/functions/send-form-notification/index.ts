@@ -31,7 +31,7 @@ const sendSmtpEmail = async ({ host, username, password, from, to, replyTo, subj
   username: string;
   password: string;
   from: string;
-  to: string;
+  to: string[];
   replyTo: string;
   subject: string;
   html: string;
@@ -87,12 +87,15 @@ const sendSmtpEmail = async ({ host, username, password, from, to, replyTo, subj
     await command("EHLO hakamtechsol.com", 250);
     await command(`AUTH PLAIN ${encodeBase64(`\0${username}\0${password}`)}`, 235);
     await command(`MAIL FROM:<${from}>`, 250);
-    await command(`RCPT TO:<${to}>`, 250);
+    // Send RCPT TO for every recipient
+    for (const recipient of to) {
+      await command(`RCPT TO:<${recipient.trim()}>`, 250);
+    }
     await command("DATA", 354);
 
     const message = [
       `From: ${from}`,
-      `To: ${to}`,
+      `To: ${to.join(", ")}`,
       `Reply-To: ${replyTo}`,
       `Subject: =?UTF-8?B?${encodeBase64(subject)}?=`,
       "MIME-Version: 1.0",
@@ -148,7 +151,7 @@ Deno.serve(async (request) => {
     const title = type === "quote" ? "New quote request" : "New contact message";
     const fields = type === "quote"
       ? [["Name", name], ["Email", email], ["Phone / WhatsApp", text(body.phone, 80) || "Not provided"], ["Service Required", text(body.service, 120) || "Not provided"], ["Project Details", message]]
-      : [["Name", name], ["Email", email], ["Message", message]];
+      : [["Name", name], ["Email", email], ["Phone / WhatsApp", text(body.phone, 80) || "Not provided"], ["Message", message]];
     const rows = fields.map(([label, value]) => `<tr><td style="padding:8px 12px;font-weight:700;vertical-align:top">${escapeHtml(label)}</td><td style="padding:8px 12px;white-space:pre-wrap">${escapeHtml(value)}</td></tr>`).join("");
 
     await sendSmtpEmail({
@@ -156,7 +159,7 @@ Deno.serve(async (request) => {
       username: smtpUsername!,
       password: smtpPassword!,
       from: smtpFromEmail!,
-      to: notificationRecipientEmail!,
+      to: notificationRecipientEmail!.split(",").map((e) => e.trim()).filter(Boolean),
       replyTo: email,
       subject: `[HakamTechSol] ${title} from ${name}`,
       html: `<main style="font-family:Arial,sans-serif;color:#1e293b"><h2 style="color:#0f6cbd">${title}</h2><table style="border-collapse:collapse;width:100%;max-width:680px;border:1px solid #e2e8f0">${rows}</table></main>`,
