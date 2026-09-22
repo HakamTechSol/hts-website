@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import SEO from "@/components/SEO";
+import NotFound from "@/pages/NotFound";
 import { getProjectById, projectArchitectures, projectsData } from "@/data/projectsData";
 import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { ProjectMockupFrame } from "@/components/ProjectMockupFrame";
@@ -13,28 +14,18 @@ import { Button } from "@/components/ui/button";
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const project = id ? getProjectById(id) : undefined;
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   if (!project) {
-    return (
-      <PageTransition>
-        <SEO title="Case Study Not Found" description="The requested project case study could not be found." noindex={true} />
-        <div className="min-h-screen bg-slate-50 flex flex-col justify-between">
-          <Navbar />
-          <div className="container mx-auto px-4 py-32 text-center">
-            <h1 className="text-3xl font-bold text-slate-800">Case Study Not Found</h1>
-            <p className="mt-4 text-slate-600">The project case study you requested could not be found.</p>
-            <Link to="/portfolio" className="mt-6 inline-block">
-              <Button className="bg-[#0f6cbd] text-white font-bold">Return to Portfolio</Button>
-            </Link>
-          </div>
-          <Footer />
-        </div>
-      </PageTransition>
-    );
+    return <NotFound />;
   }
 
+  const architecture = projectArchitectures[project.id] ?? {
+    title: `${project.title} Solution Overview`,
+    description: project.fullDescription,
+  };
   const currentIndex = projectsData.findIndex((p) => p.id === project.id);
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
   const prevProject = projectsData[(currentIndex - 1 + projectsData.length) % projectsData.length];
@@ -142,13 +133,13 @@ const ProjectDetail: React.FC = () => {
             <div className="rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 p-8 text-center shadow-2xl sm:p-12 border border-sky-500/30">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase">
-                  <Sparkles className="w-3.5 h-3.5" /> {projectArchitectures[project.id].title}
+                  <Sparkles className="w-3.5 h-3.5" /> {architecture.title}
                 </div>
                 <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-                  {projectArchitectures[project.id].title}
+                  {architecture.title}
                 </h2>
                 <p className="mx-auto max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                  {projectArchitectures[project.id].description}
+                  {architecture.description}
                 </p>
                 <div className="flex items-center justify-center gap-6 pt-2">
                   <div>
@@ -179,7 +170,7 @@ const ProjectDetail: React.FC = () => {
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
               <CaseStudyGallery project={project} />
               <div className="space-y-5 md:h-[500px] md:overflow-y-auto md:pr-3" style={{ scrollbarWidth: "thin", scrollbarColor: "#0f6cbd #e0f2fe" }}>
-                <article className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm"><h3 className="text-lg font-extrabold text-slate-900">Architecture & technical approach</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{projectArchitectures[project.id].description}</p></article>
+                <article className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm"><h3 className="text-lg font-extrabold text-slate-900">Architecture & technical approach</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{architecture.description}</p></article>
                 <div><div className="mb-4 flex items-center justify-between gap-4"><h3 className="text-lg font-extrabold text-slate-900">Key Features Included</h3><span className="rounded-full bg-[#0f6cbd] px-3 py-1 text-xs font-bold text-white">{project.keyFeatures.length} modules</span></div><div className="grid gap-3 sm:grid-cols-2">{project.keyFeatures.map((feature, index) => <article key={feature} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-sky-300 hover:shadow-md"><span className="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-100 text-xs font-extrabold text-[#0f6cbd]">{index + 1}</span><h4 className="mt-3 text-sm font-bold leading-snug text-slate-900">{feature}</h4></article>)}</div></div>
               </div>
             </div>

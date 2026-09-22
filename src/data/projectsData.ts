@@ -44,6 +44,38 @@ import klsEmailReportsImage from "@/assets/kls-email-reports.jpeg";
 import klsSupportTicketsImage from "@/assets/kls-support-tickets.jpeg";
 import klsUsersImage from "@/assets/kls-users.jpeg";
 import pestIqCoverImage from "@/assets/pestiq-cover.png";
+import attendanceManagementDashboardImage from "@/assets/attendance-management-dashboard.jpeg";
+import attendanceManagementRecordsImage from "@/assets/attendance-management-records.jpeg";
+import attendanceManagementUsersImage from "@/assets/attendance-management-users.jpeg";
+import attendanceManagementAdminsImage from "@/assets/attendance-management-admins.jpeg";
+import attendanceManagementSettingsImage from "@/assets/attendance-management-settings.jpeg";
+import attendanceManagementLoginImage from "@/assets/attendance-management-login.jpeg";
+import attendanceManagementCoverImage from "@/assets/attendance-management-cover.jpeg";
+import bakeryManagementRecipesImage from "@/assets/bakery-management-recipes.jpeg";
+import bakeryManagementIngredientsImage from "@/assets/bakery-management-ingredients.jpeg";
+import bakeryManagementClientsImage from "@/assets/bakery-management-clients.jpeg";
+import bakeryManagementSuppliersImage from "@/assets/bakery-management-suppliers.jpeg";
+import bakeryManagementCoverImage from "@/assets/bakery-management-cover.jpeg";
+import electronicVotingLoginImage from "@/assets/electronic-voting-login.jpeg";
+import electronicVotingDashboardImage from "@/assets/electronic-voting-dashboard.jpeg";
+import electronicVotingVotesImage from "@/assets/electronic-voting-votes.jpeg";
+import electronicVotingVotersImage from "@/assets/electronic-voting-voters.jpeg";
+import electronicVotingCandidatesImage from "@/assets/electronic-voting-candidates.jpeg";
+import electronicVotingCoverImage from "@/assets/electronic-voting-cover.jpeg";
+import hrmsCoverImage from "@/assets/hrms-cover.jpeg";
+import hrmsDashboardImage from "@/assets/hrms-dashboard.jpeg";
+import hrmsEmployeesImage from "@/assets/hrms-employees.jpeg";
+import hrmsDesignationsImage from "@/assets/hrms-designations.jpeg";
+import hrmsCompanyTreeImage from "@/assets/hrms-company-tree.jpeg";
+import hrmsAttendanceImage from "@/assets/hrms-attendance.jpeg";
+import hrmsHolidaysImage from "@/assets/hrms-holidays.jpeg";
+import hrmsSalariesImage from "@/assets/hrms-salaries.jpeg";
+import hrmsSettingsImage from "@/assets/hrms-settings.jpeg";
+import hrmsTrainingImage from "@/assets/hrms-training.jpeg";
+import hrmsNominationsImage from "@/assets/hrms-nominations.jpeg";
+import hrmsLoginImage from "@/assets/hrms-login.jpeg";
+import aiKnowledgeAssistantImage from "@/assets/ai-knowledge-assistant.jpeg";
+import waterPlantPosCoverImage from "@/assets/water-plant-pos-cover.jpeg";
 
 export interface Project {
   id: string;
@@ -83,6 +115,7 @@ export const projectArchitectures: Record<string, { title: string; description: 
   "matchpro-operations-platform": { title: "Centralized Operations Management Architecture", description: "React dashboards and .NET Web APIs provide a centralized operational layer for check-ins, machine readings, shifts, financial records, and role-specific reporting." },
   "khyratna-ecommerce-app": { title: "Mobile Commerce Journey Architecture", description: "A Flutter and Firebase commerce experience connects product discovery, carts, checkout, OTP authentication, delivery choices, and GPS-aware order updates." },
   "notary-management-system": { title: "Paperless Legal Workflow Architecture", description: "A React, Laravel, and MySQL platform centralizes cases, agreements, services, fees, documents, and reports behind configurable roles and permissions." },
+  "hrms": { title: "Centralized Human Resources Architecture", description: "A unified HR platform brings employee records, attendance, payroll, leave, organization structure, training, nominations, and access control into one secure operational workspace." },
 };
 
 export const projectsData: Project[] = [
@@ -746,6 +779,10 @@ export const projectsData: Project[] = [
     badge: "Point of Sale",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: waterPlantPosCoverImage,
+      detail: waterPlantPosCoverImage,
+    },
     mockupScreens: []
   },
   {
@@ -813,6 +850,10 @@ export const projectsData: Project[] = [
     badge: "AI Assistant",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: aiKnowledgeAssistantImage,
+      detail: aiKnowledgeAssistantImage,
+    },
     mockupScreens: []
   },
   {
@@ -835,6 +876,18 @@ export const projectsData: Project[] = [
     badge: "Web Application",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: attendanceManagementCoverImage,
+      detail: attendanceManagementCoverImage,
+    },
+    galleryImages: [
+      { src: attendanceManagementDashboardImage, alt: "Attendance Management System dashboard and IP settings" },
+      { src: attendanceManagementRecordsImage, alt: "Attendance Management System attendance records" },
+      { src: attendanceManagementUsersImage, alt: "Attendance Management System users management" },
+      { src: attendanceManagementAdminsImage, alt: "Attendance Management System admins management" },
+      { src: attendanceManagementSettingsImage, alt: "Attendance Management System user settings" },
+      { src: attendanceManagementLoginImage, alt: "Attendance Management System sign-in screen" },
+    ],
     mockupScreens: []
   },
   {
@@ -857,6 +910,17 @@ export const projectsData: Project[] = [
     badge: "Web Application",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: electronicVotingCoverImage,
+      detail: electronicVotingCoverImage,
+    },
+    galleryImages: [
+      { src: electronicVotingLoginImage, alt: "Electronic Voting System sign-in screen" },
+      { src: electronicVotingDashboardImage, alt: "Electronic Voting System dashboard" },
+      { src: electronicVotingVotesImage, alt: "Electronic Voting System votes list" },
+      { src: electronicVotingVotersImage, alt: "Electronic Voting System voters list" },
+      { src: electronicVotingCandidatesImage, alt: "Electronic Voting System candidates list" },
+    ],
     mockupScreens: []
   },
   {
@@ -879,7 +943,68 @@ export const projectsData: Project[] = [
     badge: "Web Application",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: bakeryManagementCoverImage,
+      detail: bakeryManagementCoverImage,
+    },
+    galleryImages: [
+      { src: bakeryManagementRecipesImage, alt: "Bakery Management System recipe workflow" },
+      { src: bakeryManagementIngredientsImage, alt: "Bakery Management System ingredients management" },
+      { src: bakeryManagementClientsImage, alt: "Bakery Management System client management" },
+      { src: bakeryManagementSuppliersImage, alt: "Bakery Management System supplier management" },
+    ],
     mockupScreens: []
+  },
+  {
+    id: "hrms",
+    title: "HRMS",
+    subtitle: "Centralized Human Resource Management System",
+    category: "Web Application",
+    client: "",
+    duration: "",
+    role: "",
+    summary: "A centralized solution for managing employees, attendance, designations, leaves, salaries, company structure, training, and other essential HR processes.",
+    fullDescription: "HRMS brings important human resources processes together in one centralized solution. It helps organizations manage employees, attendance, designations, leaves, salaries, company structure, training, nominations, reports, and secure role-based access from a single platform.",
+    techStack: [],
+    keyFeatures: [
+      "Employee Management",
+      "Attendance Tracking",
+      "Leave Management",
+      "Salary & Payroll Management",
+      "Designation Management",
+      "Company Tree & Organization Structure",
+      "Company Settings",
+      "Training Management",
+      "Nominations",
+      "HR Reports & Analytics",
+      "Secure Role-Based Access",
+    ],
+    challenges: [],
+    solutions: [],
+    metrics: [],
+    accentColor: "from-violet-500 to-indigo-600",
+    gradient: "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-600",
+    badge: "HR Management Platform",
+    platforms: ["webPortal"],
+    rolesSupported: [],
+    visualImages: {
+      card: hrmsCoverImage,
+      detail: hrmsCoverImage,
+    },
+    galleryImages: [
+      { src: hrmsDashboardImage, alt: "HRMS dashboard" },
+      { src: hrmsEmployeesImage, alt: "HRMS employee management" },
+      { src: hrmsDesignationsImage, alt: "HRMS designation management" },
+      { src: hrmsCompanyTreeImage, alt: "HRMS company tree" },
+      { src: hrmsAttendanceImage, alt: "HRMS attendance tracking" },
+      { src: hrmsHolidaysImage, alt: "HRMS holidays management" },
+      { src: hrmsSalariesImage, alt: "HRMS salary management" },
+      { src: hrmsSettingsImage, alt: "HRMS company settings" },
+      { src: hrmsTrainingImage, alt: "HRMS training management" },
+      { src: hrmsNominationsImage, alt: "HRMS nominations" },
+      { src: hrmsLoginImage, alt: "HRMS sign-in screen" },
+    ],
+    mockupScreens: [],
   }
 ];
 
