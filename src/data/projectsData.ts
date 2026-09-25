@@ -1,81 +1,104 @@
-import myPlaysOperationsImage from "@/assets/myplays-operations.jpeg";
-import khyratnaEcommerceImage from "@/assets/khyratna-ecommerce.jpeg";
-import khyratnaScreensImage from "@/assets/khyratna-screens.png";
-import khyratnaCartImage from "@/assets/khyratna-cart.jpeg";
-import khyratnaAccountImage from "@/assets/khyratna-account.jpeg";
-import khyratnaHomeImage from "@/assets/khyratna-home.jpeg";
-import khyratnaProductImage from "@/assets/khyratna-product.jpeg";
-import khyratnaLoginImage from "@/assets/khyratna-login.jpeg";
-import matchProLoginImage from "@/assets/matchpro-login.jpeg";
-import matchProDashboardImage from "@/assets/matchpro-dashboard.jpeg";
-import matchProCustomersImage from "@/assets/matchpro-customers.jpeg";
-import klsNotariesImage from "@/assets/kls-notaries.jpeg";
-import klsProfileImage from "@/assets/kls-profile.jpeg";
-import klsReceptionImage from "@/assets/kls-reception.jpeg";
-import klsAdministrationImage from "@/assets/kls-administration.jpeg";
-import klsNotaryDetailsImage from "@/assets/kls-notary-details.jpeg";
+import myPlaysOperationsImage from "@/assets/matchpro-operations-platform/myplays-operations.jpeg";
+import socialMediaHomeImage from "@/assets/social-media-app/home.png";
+import socialMediaExploreImage from "@/assets/social-media-app/explore.png";
+import socialMediaFavoritesImage from "@/assets/social-media-app/favorites.png";
+import socialMediaMessagesImage from "@/assets/social-media-app/messages.png";
+import socialMediaProfileImage from "@/assets/social-media-app/profile.png";
+import khyratnaEcommerceImage from "@/assets/khyratna-ecommerce-app/khyratna-ecommerce.jpeg";
+import khyratnaScreensImage from "@/assets/khyratna-ecommerce-app/khyratna-screens.png";
+import khyratnaCartImage from "@/assets/khyratna-ecommerce-app/khyratna-cart.jpeg";
+import khyratnaAccountImage from "@/assets/khyratna-ecommerce-app/khyratna-account.jpeg";
+import khyratnaHomeImage from "@/assets/khyratna-ecommerce-app/khyratna-home.jpeg";
+import khyratnaProductImage from "@/assets/khyratna-ecommerce-app/khyratna-product.jpeg";
+import khyratnaLoginImage from "@/assets/khyratna-ecommerce-app/khyratna-login.jpeg";
+import matchProLoginImage from "@/assets/matchpro-operations-platform/matchpro-login.jpeg";
+import matchProDashboardImage from "@/assets/matchpro-operations-platform/matchpro-dashboard.jpeg";
+import matchProCustomersImage from "@/assets/matchpro-operations-platform/matchpro-customers.jpeg";
+import klsNotariesImage from "@/assets/notary-management-system/kls-notaries.jpeg";
+import klsProfileImage from "@/assets/notary-management-system/kls-profile.jpeg";
+import klsReceptionImage from "@/assets/notary-management-system/kls-reception.jpeg";
+import klsAdministrationImage from "@/assets/notary-management-system/kls-administration.jpeg";
+import klsNotaryDetailsImage from "@/assets/notary-management-system/kls-notary-details.jpeg";
 import klsNotarySummaryImage from "@/assets/kls-notary-summary.jpeg";
-import klsLoginImage from "@/assets/kls-login.jpeg";
-import klsDashboardImage from "@/assets/kls-dashboard.jpeg";
-import notaryManagementSystemImage from "@/assets/notary-management-system.jpeg";
-import klsPropertyPortalImage from "@/assets/kls-property-portal.png";
-import parkingAlertAppImage from "@/assets/parking-alert-app.jpeg";
-import learningManagementSystemImage from "@/assets/learning-management-system.jpeg";
-import hospitalManagementSystemImage from "@/assets/hospital-management-system.jpeg";
-import angelopoulosLoyaltyImage from "@/assets/angelopoulos-loyalty.jpeg";
-import playersEvaluationLoginImage from "@/assets/players-evaluation-login.jpeg";
-import playersEvaluationDashboardImage from "@/assets/players-evaluation-dashboard.jpeg";
-import playersEvaluationPlayerCardsImage from "@/assets/players-evaluation-player-cards.jpeg";
-import playersEvaluationManagementImage from "@/assets/players-evaluation-management.jpeg";
-import playersEvaluationAddPlayerImage from "@/assets/players-evaluation-add-player.jpeg";
-import playersEvaluationTeamsImage from "@/assets/players-evaluation-teams.jpeg";
-import playersEvaluationTeamRosterImage from "@/assets/players-evaluation-team-roster.jpeg";
-import playersEvaluationRadarImage from "@/assets/players-evaluation-radar.jpeg";
-import playersEvaluationComparisonImage from "@/assets/players-evaluation-comparison.jpeg";
-import playersEvaluationCoverImage from "@/assets/players-evaluation-cover.png";
-import klsAgentsImage from "@/assets/kls-agents.jpeg";
-import klsRealDashboardImage from "@/assets/kls-real-dashboard.jpeg";
-import klsClientsImage from "@/assets/kls-clients.jpeg";
-import klsExpensesImage from "@/assets/kls-expenses.jpeg";
-import klsRealLoginImage from "@/assets/kls-real-login.jpeg";
-import klsPropertiesImage from "@/assets/kls-properties.jpeg";
-import klsPropertyProfileImage from "@/assets/kls-property-profile.jpeg";
-import klsEmailReportsImage from "@/assets/kls-email-reports.jpeg";
-import klsSupportTicketsImage from "@/assets/kls-support-tickets.jpeg";
-import klsUsersImage from "@/assets/kls-users.jpeg";
-import pestIqCoverImage from "@/assets/pestiq-cover.png";
-import attendanceManagementDashboardImage from "@/assets/attendance-management-dashboard.jpeg";
-import attendanceManagementRecordsImage from "@/assets/attendance-management-records.jpeg";
-import attendanceManagementUsersImage from "@/assets/attendance-management-users.jpeg";
-import attendanceManagementAdminsImage from "@/assets/attendance-management-admins.jpeg";
-import attendanceManagementSettingsImage from "@/assets/attendance-management-settings.jpeg";
-import attendanceManagementLoginImage from "@/assets/attendance-management-login.jpeg";
-import attendanceManagementCoverImage from "@/assets/attendance-management-cover.jpeg";
-import bakeryManagementRecipesImage from "@/assets/bakery-management-recipes.jpeg";
-import bakeryManagementIngredientsImage from "@/assets/bakery-management-ingredients.jpeg";
-import bakeryManagementClientsImage from "@/assets/bakery-management-clients.jpeg";
-import bakeryManagementSuppliersImage from "@/assets/bakery-management-suppliers.jpeg";
-import bakeryManagementCoverImage from "@/assets/bakery-management-cover.jpeg";
-import electronicVotingLoginImage from "@/assets/electronic-voting-login.jpeg";
-import electronicVotingDashboardImage from "@/assets/electronic-voting-dashboard.jpeg";
-import electronicVotingVotesImage from "@/assets/electronic-voting-votes.jpeg";
-import electronicVotingVotersImage from "@/assets/electronic-voting-voters.jpeg";
-import electronicVotingCandidatesImage from "@/assets/electronic-voting-candidates.jpeg";
-import electronicVotingCoverImage from "@/assets/electronic-voting-cover.jpeg";
-import hrmsCoverImage from "@/assets/hrms-cover.jpeg";
-import hrmsDashboardImage from "@/assets/hrms-dashboard.jpeg";
-import hrmsEmployeesImage from "@/assets/hrms-employees.jpeg";
-import hrmsDesignationsImage from "@/assets/hrms-designations.jpeg";
-import hrmsCompanyTreeImage from "@/assets/hrms-company-tree.jpeg";
-import hrmsAttendanceImage from "@/assets/hrms-attendance.jpeg";
-import hrmsHolidaysImage from "@/assets/hrms-holidays.jpeg";
-import hrmsSalariesImage from "@/assets/hrms-salaries.jpeg";
-import hrmsSettingsImage from "@/assets/hrms-settings.jpeg";
-import hrmsTrainingImage from "@/assets/hrms-training.jpeg";
-import hrmsNominationsImage from "@/assets/hrms-nominations.jpeg";
-import hrmsLoginImage from "@/assets/hrms-login.jpeg";
-import aiKnowledgeAssistantImage from "@/assets/ai-knowledge-assistant.jpeg";
-import waterPlantPosCoverImage from "@/assets/water-plant-pos-cover.jpeg";
+import klsLoginImage from "@/assets/notary-management-system/kls-login.jpeg";
+import klsDashboardImage from "@/assets/notary-management-system/kls-dashboard.jpeg";
+import notaryManagementSystemImage from "@/assets/notary-management-system/notary-management-system.jpeg";
+import klsPropertyPortalImage from "@/assets/kls-property-portal/kls-property-portal.png";
+import parkingAlertAppImage from "@/assets/parking-alert-app/parking-alert-app.jpeg";
+import learningManagementSystemImage from "@/assets/learning-management-system/learning-management-system.jpeg";
+import hospitalManagementSystemImage from "@/assets/hospital-management-system/hospital-management-system.jpeg";
+import angelopoulosLoyaltyImage from "@/assets/angelopoulos-loyalty-app/angelopoulos-loyalty.jpeg";
+import playersEvaluationLoginImage from "@/assets/players-evaluation-system/players-evaluation-login.jpeg";
+import playersEvaluationDashboardImage from "@/assets/players-evaluation-system/players-evaluation-dashboard.jpeg";
+import playersEvaluationPlayerCardsImage from "@/assets/players-evaluation-system/players-evaluation-player-cards.jpeg";
+import playersEvaluationManagementImage from "@/assets/players-evaluation-system/players-evaluation-management.jpeg";
+import playersEvaluationAddPlayerImage from "@/assets/players-evaluation-system/players-evaluation-add-player.jpeg";
+import playersEvaluationTeamsImage from "@/assets/players-evaluation-system/players-evaluation-teams.jpeg";
+import playersEvaluationTeamRosterImage from "@/assets/players-evaluation-system/players-evaluation-team-roster.jpeg";
+import playersEvaluationRadarImage from "@/assets/players-evaluation-system/players-evaluation-radar.jpeg";
+import playersEvaluationComparisonImage from "@/assets/players-evaluation-system/players-evaluation-comparison.jpeg";
+import playersEvaluationCoverImage from "@/assets/players-evaluation-system/players-evaluation-cover.png";
+import klsAgentsImage from "@/assets/kls-property-portal/kls-agents.jpeg";
+import klsRealDashboardImage from "@/assets/kls-property-portal/kls-real-dashboard.jpeg";
+import klsClientsImage from "@/assets/kls-property-portal/kls-clients.jpeg";
+import klsExpensesImage from "@/assets/kls-property-portal/kls-expenses.jpeg";
+import klsRealLoginImage from "@/assets/kls-property-portal/kls-real-login.jpeg";
+import klsPropertiesImage from "@/assets/kls-property-portal/kls-properties.jpeg";
+import klsPropertyProfileImage from "@/assets/kls-property-portal/kls-property-profile.jpeg";
+import klsEmailReportsImage from "@/assets/kls-property-portal/kls-email-reports.jpeg";
+import klsSupportTicketsImage from "@/assets/kls-property-portal/kls-support-tickets.jpeg";
+import klsUsersImage from "@/assets/kls-property-portal/kls-users.jpeg";
+import pestIqCoverImage from "@/assets/pest-iq-web-mobile-app/pestiq-cover.png";
+import attendanceManagementDashboardImage from "@/assets/attendance-management-system/attendance-management-dashboard.jpeg";
+import attendanceManagementRecordsImage from "@/assets/attendance-management-system/attendance-management-records.jpeg";
+import attendanceManagementUsersImage from "@/assets/attendance-management-system/attendance-management-users.jpeg";
+import attendanceManagementAdminsImage from "@/assets/attendance-management-system/attendance-management-admins.jpeg";
+import attendanceManagementSettingsImage from "@/assets/attendance-management-system/attendance-management-settings.jpeg";
+import attendanceManagementLoginImage from "@/assets/attendance-management-system/attendance-management-login.jpeg";
+import attendanceManagementCoverImage from "@/assets/attendance-management-system/attendance-management-cover.jpeg";
+import bakeryManagementRecipesImage from "@/assets/bakery-management-system/bakery-management-recipes.jpeg";
+import bakeryManagementIngredientsImage from "@/assets/bakery-management-system/bakery-management-ingredients.jpeg";
+import bakeryManagementClientsImage from "@/assets/bakery-management-system/bakery-management-clients.jpeg";
+import bakeryManagementSuppliersImage from "@/assets/bakery-management-system/bakery-management-suppliers.jpeg";
+import bakeryManagementCoverImage from "@/assets/bakery-management-system/bakery-management-cover.jpeg";
+import electronicVotingLoginImage from "@/assets/electronic-voting-system/electronic-voting-login.jpeg";
+import electronicVotingDashboardImage from "@/assets/electronic-voting-system/electronic-voting-dashboard.jpeg";
+import electronicVotingVotesImage from "@/assets/electronic-voting-system/electronic-voting-votes.jpeg";
+import electronicVotingVotersImage from "@/assets/electronic-voting-system/electronic-voting-voters.jpeg";
+import electronicVotingCandidatesImage from "@/assets/electronic-voting-system/electronic-voting-candidates.jpeg";
+import electronicVotingCoverImage from "@/assets/electronic-voting-system/electronic-voting-cover.jpeg";
+import hrmsCoverImage from "@/assets/hrms/hrms-cover.jpeg";
+import hrmsDashboardImage from "@/assets/hrms/hrms-dashboard.jpeg";
+import hrmsEmployeesImage from "@/assets/hrms/hrms-employees.jpeg";
+import hrmsDesignationsImage from "@/assets/hrms/hrms-designations.jpeg";
+import hrmsCompanyTreeImage from "@/assets/hrms/hrms-company-tree.jpeg";
+import hrmsAttendanceImage from "@/assets/hrms/hrms-attendance.jpeg";
+import hrmsHolidaysImage from "@/assets/hrms/hrms-holidays.jpeg";
+import hrmsSalariesImage from "@/assets/hrms/hrms-salaries.jpeg";
+import hrmsSettingsImage from "@/assets/hrms/hrms-settings.jpeg";
+import hrmsTrainingImage from "@/assets/hrms/hrms-training.jpeg";
+import hrmsNominationsImage from "@/assets/hrms/hrms-nominations.jpeg";
+import hrmsLoginImage from "@/assets/hrms/hrms-login.jpeg";
+import aiKnowledgeAssistantImage from "@/assets/ai-knowledge-assistant/ai-knowledge-assistant.jpeg";
+import waterPlantPosCoverImage from "@/assets/water-plant-point-of-sale/water-plant-pos-cover.jpeg";
+import waterPlantLoginImage from "@/assets/water-plant-point-of-sale/login.jpeg";
+import waterPlantDocumentEditorImage from "@/assets/water-plant-point-of-sale/document-editor.jpeg";
+import waterPlantDashboardImage from "@/assets/water-plant-point-of-sale/dashboard.jpeg";
+import waterPlantDocumentOverviewImage from "@/assets/water-plant-point-of-sale/document-editor-overview.jpeg";
+import waterPlantExpensesImage from "@/assets/water-plant-point-of-sale/expenses.jpeg";
+import inventoryDashboardLightImage from "@/assets/inventory-management-system/dashboard-light.jpeg";
+import inventoryProductOverviewImage from "@/assets/inventory-management-system/product-overview.jpeg";
+import inventoryDashboardDarkImage from "@/assets/inventory-management-system/dashboard-dark.jpeg";
+import inventoryOrdersDarkImage from "@/assets/inventory-management-system/orders-dark.jpeg";
+import inventoryLoginImage from "@/assets/inventory-management-system/login.jpeg";
+import podTripDetailsImage from "@/assets/pod-mobile-app/trip-details.jpeg";
+import podTripCalendarImage from "@/assets/pod-mobile-app/trip-calendar.jpeg";
+import podTripsListImage from "@/assets/pod-mobile-app/trips-list.jpeg";
+import podTripHistoryImage from "@/assets/pod-mobile-app/trip-history.jpeg";
+import podAppCoverImage from "@/assets/pod-mobile-app/pod-app-cover.jpeg";
+import podAppSettingsImage from "@/assets/pod-mobile-app/app-settings.jpeg";
+import podLogoImage from "@/assets/pod-mobile-app/logo.jpeg";
+import podDashboardImage from "@/assets/pod-mobile-app/dashboard.jpeg";
 
 export interface Project {
   id: string;
@@ -735,6 +758,17 @@ export const projectsData: Project[] = [
     badge: "Mobile App",
     platforms: ["appStore", "googlePlay"],
     rolesSupported: [],
+    visualImages: {
+      card: socialMediaHomeImage,
+      detail: socialMediaHomeImage,
+    },
+    galleryImages: [
+      { src: socialMediaHomeImage, alt: "Zeochat home screen" },
+      { src: socialMediaExploreImage, alt: "Zeochat explore screen with nearby experiences" },
+      { src: socialMediaFavoritesImage, alt: "Zeochat saved favorites screen" },
+      { src: socialMediaMessagesImage, alt: "Zeochat messages screen" },
+      { src: socialMediaProfileImage, alt: "Zeochat user profile screen" },
+    ],
     mockupScreens: []
   },
   {
@@ -757,6 +791,17 @@ export const projectsData: Project[] = [
     badge: "Web Application",
     platforms: ["webPortal"],
     rolesSupported: [],
+    visualImages: {
+      card: inventoryProductOverviewImage,
+      detail: inventoryProductOverviewImage,
+    },
+    galleryImages: [
+      { src: inventoryDashboardLightImage, alt: "KingM Inventory Management light dashboard" },
+      { src: inventoryProductOverviewImage, alt: "KingM Inventory Management product and dashboard overview" },
+      { src: inventoryDashboardDarkImage, alt: "KingM Inventory Management dark dashboard" },
+      { src: inventoryOrdersDarkImage, alt: "KingM Inventory Management orders list" },
+      { src: inventoryLoginImage, alt: "KingM Inventory Management sign-in page" },
+    ],
     mockupScreens: []
   },
   {
@@ -783,6 +828,13 @@ export const projectsData: Project[] = [
       card: waterPlantPosCoverImage,
       detail: waterPlantPosCoverImage,
     },
+    galleryImages: [
+      { src: waterPlantLoginImage, alt: "Water Plant Point of Sale sign-in screen" },
+      { src: waterPlantDocumentEditorImage, alt: "Water Plant Point of Sale document editor" },
+      { src: waterPlantDashboardImage, alt: "Water Plant Point of Sale dashboard" },
+      { src: waterPlantDocumentOverviewImage, alt: "Water Plant Point of Sale document management screen" },
+      { src: waterPlantExpensesImage, alt: "Water Plant Point of Sale expenses list" },
+    ],
     mockupScreens: []
   },
   {
@@ -828,6 +880,20 @@ export const projectsData: Project[] = [
     badge: "Mobile App",
     platforms: ["googlePlay"],
     rolesSupported: [],
+    visualImages: {
+      card: podAppCoverImage,
+      detail: podAppCoverImage,
+    },
+    galleryImages: [
+      { src: podTripDetailsImage, alt: "POD app trip details and passenger information" },
+      { src: podTripCalendarImage, alt: "POD app trip calendar and schedule" },
+      { src: podTripsListImage, alt: "POD app trips list" },
+      { src: podTripHistoryImage, alt: "POD app trip history and status" },
+      { src: podAppCoverImage, alt: "POD Mobile App screen collage" },
+      { src: podAppSettingsImage, alt: "POD app settings and account options" },
+      { src: podLogoImage, alt: "POD Mobile App logo" },
+      { src: podDashboardImage, alt: "POD app driver dashboard" },
+    ],
     mockupScreens: []
   },
   {
