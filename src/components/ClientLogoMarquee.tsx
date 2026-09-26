@@ -3,7 +3,7 @@ import chronosLogo from "@/assets/client-logos/chronos.jpeg";
 import clearSkyPowerLogo from "@/assets/client-logos/clearshky-power.png";
 import dwsLogo from "@/assets/client-logos/DWS.webp";
 import eliteDentalCareersLogo from "@/assets/client-logos/elite-dental-careers.jpeg";
-import enfixoLogo from "@/assets/client-logos/enfixo.webp";
+import enfixoLogo from "@/assets/client-logos/enfixo.png";
 import grantsBakeryLogo from "@/assets/client-logos/grants-bakery.png";
 import hayyakLogo from "@/assets/client-logos/hayyak.png";
 import jnclmLogo from "@/assets/client-logos/jnclm.png";

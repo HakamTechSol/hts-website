@@ -18,7 +18,7 @@ const defaultFaqs: FaqItem[] = [
         We deliver end-to-end digital solutions: custom software development, web application development, mobile apps (Flutter, React Native, and FlutterFlow), SaaS platforms, Shopify & e-commerce stores, AI and workflow automation, UI/UX design, staff augmentation, and performance marketing. You can check our services by visiting{" "}
         <Link to="/services" className="font-bold underline text-white hover:text-sky-200 transition-colors">
           Our Services 
-        </Link>Page.
+        </Link> Page.
       </>
     )
   },

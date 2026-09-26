@@ -1,5 +1,6 @@
 import myPlaysOperationsImage from "@/assets/matchpro-operations-platform/myplays-operations.jpeg";
 import socialMediaHomeImage from "@/assets/social-media-app/home.png";
+import socialMediaCoverImage from "@/assets/social-media-app/cover-Profile.png";
 import socialMediaExploreImage from "@/assets/social-media-app/explore.png";
 import socialMediaFavoritesImage from "@/assets/social-media-app/favorites.png";
 import socialMediaMessagesImage from "@/assets/social-media-app/messages.png";
@@ -759,8 +760,8 @@ export const projectsData: Project[] = [
     platforms: ["appStore", "googlePlay"],
     rolesSupported: [],
     visualImages: {
-      card: socialMediaHomeImage,
-      detail: socialMediaHomeImage,
+      card: socialMediaCoverImage,
+      detail: socialMediaCoverImage,
     },
     galleryImages: [
       { src: socialMediaHomeImage, alt: "Zeochat home screen" },
