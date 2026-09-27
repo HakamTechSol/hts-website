@@ -1,11 +1,14 @@
 import angelopoulosLogo from "@/assets/client-logos/angelopoulos.png";
+import brothersConsultantsLogo from "@/assets/client-logos/brothers-consultants.png";
 import chronosLogo from "@/assets/client-logos/chronos.jpeg";
 import clearSkyPowerLogo from "@/assets/client-logos/clearshky-power.png";
+import cytrusLogicLogo from "@/assets/client-logos/cytrus-logic.jpg.jpeg";
 import dwsLogo from "@/assets/client-logos/DWS.webp";
 import eliteDentalCareersLogo from "@/assets/client-logos/elite-dental-careers.jpeg";
 import enfixoLogo from "@/assets/client-logos/enfixo.png";
 import grantsBakeryLogo from "@/assets/client-logos/grants-bakery.png";
 import hayyakLogo from "@/assets/client-logos/hayyak.png";
+import hrAssessorAuditLogo from "@/assets/client-logos/hr-assessor-audit.png";
 import jnclmLogo from "@/assets/client-logos/jnclm.png";
 import khyratnaLogo from "@/assets/client-logos/khyratna.png";
 import klsLogo from "@/assets/client-logos/kls.png";
@@ -13,6 +16,7 @@ import notaryLogo from "@/assets/client-logos/notary.png";
 import nrgLogo from "@/assets/client-logos/NRG.jpeg";
 import nrgAiLogo from "@/assets/client-logos/NRG-AI.png";
 import nugalValleySchoolLogo from "@/assets/client-logos/nugal-valley-school.png";
+import parxLogo from "@/assets/client-logos/parx.png";
 import pestIqLogo from "@/assets/client-logos/pestiqlgo.png";
 import pureWaterLogo from "@/assets/client-logos/pure-water.png";
 import sweetRideCafeLogo from "@/assets/client-logos/sweet-ride-cafe.png";
@@ -23,13 +27,16 @@ import xitLogo from "@/assets/client-logos/xit.png";
 
 const clientLogos = [
   { src: angelopoulosLogo, alt: "Angelopoulos" },
+  { src: brothersConsultantsLogo, alt: "Brothers Consultants" },
   { src: chronosLogo, alt: "Chronos" },
   { src: clearSkyPowerLogo, alt: "ClearSky Power" },
+  { src: cytrusLogicLogo, alt: "Cytrus Logic" },
   { src: dwsLogo, alt: "DWS" },
   { src: eliteDentalCareersLogo, alt: "Elite Dental Careers" },
   { src: enfixoLogo, alt: "Enfixo" },
   { src: grantsBakeryLogo, alt: "Grants Bakery" },
   { src: hayyakLogo, alt: "Hayyak" },
+  { src: hrAssessorAuditLogo, alt: "HR Assessor & Audit" },
   { src: jnclmLogo, alt: "JNCLM" },
   { src: khyratnaLogo, alt: "Khyratna" },
   { src: klsLogo, alt: "KLS" },
@@ -37,6 +44,7 @@ const clientLogos = [
   { src: nrgLogo, alt: "NRG" },
   { src: nrgAiLogo, alt: "NRG AI" },
   { src: nugalValleySchoolLogo, alt: "Nugal Valley School" },
+  { src: parxLogo, alt: "Parx Industries International" },
   { src: pestIqLogo, alt: "Pest IQ" },
   { src: pureWaterLogo, alt: "Pure Water" },
   { src: sweetRideCafeLogo, alt: "Sweet Ride Cafe" },
