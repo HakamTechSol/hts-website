@@ -11,8 +11,8 @@
 }
 
 .client-logo-marquee {
-  height: 80px;
-  max-height: 100px;
+  height: 112px;
+  max-height: 130px;
   overflow: hidden;
   border-bottom: 1px solid rgb(226 232 240);
   background: white;
@@ -41,7 +41,7 @@
 .client-logo-marquee__logo {
   display: flex;
   width: 176px;
-  height: 42px;
+  height: 58px;
   flex: 0 0 176px;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
 
 @media (max-width: 640px) {
   .client-logo-marquee {
-    height: 68px;
+    height: 88px;
   }
 
   .client-logo-marquee__set {
@@ -68,7 +68,7 @@
 
   .client-logo-marquee__logo {
     width: 104px;
-    height: 34px;
+    height: 44px;
     flex-basis: 104px;
   }
 }
