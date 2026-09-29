@@ -54,11 +54,11 @@ const clientLogos = [
   { src: xitLogo, alt: "XIT" },
 ];
 
-const LogoSet = () => (
-  <div className="client-logo-marquee__set" aria-hidden="true">
+const LogoSet = ({ duplicate = false }: { duplicate?: boolean }) => (
+  <div className={`client-logo-marquee__set${duplicate ? " client-logo-marquee__set--duplicate" : ""}`} aria-hidden={duplicate} role={duplicate ? undefined : "list"}>
     {clientLogos.map((logo) => (
-      <div key={logo.alt} className="client-logo-marquee__logo">
-        <img src={logo.src} alt="" className="client-logo-marquee__image" />
+      <div key={logo.alt} className="client-logo-marquee__logo" role={duplicate ? undefined : "listitem"}>
+        <img src={logo.src} alt={duplicate ? "" : logo.alt} className="client-logo-marquee__image" />
       </div>
     ))}
   </div>
@@ -68,7 +68,7 @@ const ClientLogoMarquee = () => (
   <section className="client-logo-marquee" aria-label="Our clients">
     <div className="client-logo-marquee__track">
       <LogoSet />
-      <LogoSet />
+      <LogoSet duplicate />
     </div>
   </section>
 );

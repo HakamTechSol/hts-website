@@ -14,7 +14,7 @@ import { Link, useLocation } from "react-router-dom";
 const categories = [
   "All",
   "Web Application",
-  "Mobile App",
+  "Mobile Application",
   "SaaS & Analytics",
   "EdTech",
   "Healthcare System",

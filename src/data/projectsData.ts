@@ -416,7 +416,7 @@ export const projectsData: Project[] = [
     ],
     accentColor: "from-blue-500 to-indigo-600",
     gradient: "bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-600",
-    badge: "EdTech Mobile App",
+    badge: "Learning Management System",
     platforms: ["appStore", "googlePlay", "webPortal"],
     rolesSupported: ["Super Administrator", "Teacher / Qari", "Student", "Parent / Guardian"],
     visualImages: {
@@ -1000,7 +1000,7 @@ export const projectsData: Project[] = [
     role: "",
     summary: "A single platform for bakeries to simplify daily operations and organize recipes, ingredients, clients, suppliers, dough, and production.",
     fullDescription: "Bakery Management System gives businesses one smart platform to simplify daily operations and manage recipes, ingredients, clients, suppliers, dough, and production while keeping everything organized.",
-    techStack: [],
+    techStack: ["PHP Laravel", "MySQL"],
     keyFeatures: ["Recipe management", "Ingredient management", "Client management", "Supplier management", "Dough and production management", "Production workflows"],
     challenges: [],
     solutions: [],

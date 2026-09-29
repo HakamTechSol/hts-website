@@ -43,8 +43,8 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
         >
           {/* Top Header Tag */}
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="px-3 py-1 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold uppercase tracking-wide">
-              {project.badge}
+            <span className="max-w-full px-3 py-1 rounded-full bg-sky-100 text-[#0f6cbd] text-xs font-extrabold tracking-wide">
+              {project.title}
             </span>
             <span className="flip-instruction flip-instruction--hover text-xs font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
               Hover to Flip ↻

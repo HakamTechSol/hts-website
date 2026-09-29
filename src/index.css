@@ -22,8 +22,12 @@
   display: flex;
   width: max-content;
   height: 100%;
-  animation: client-logo-marquee-scroll 42s linear infinite;
+  animation: client-logo-marquee-scroll 28s linear infinite;
   will-change: transform;
+}
+
+.client-logo-marquee:hover .client-logo-marquee__track {
+  animation-play-state: paused;
 }
 
 .client-logo-marquee__set {
@@ -36,9 +40,9 @@
 
 .client-logo-marquee__logo {
   display: flex;
-  width: 144px;
+  width: 176px;
   height: 42px;
-  flex: 0 0 144px;
+  flex: 0 0 176px;
   align-items: center;
   justify-content: center;
 }
@@ -69,9 +73,46 @@
   }
 }
 
+@media (min-width: 641px) and (max-width: 1024px) {
+  .client-logo-marquee__set {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .client-logo-marquee__logo {
+    width: 136px;
+    flex-basis: 136px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .client-logo-marquee {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
   .client-logo-marquee__track {
-    animation-play-state: paused;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .client-logo-marquee__set {
+    display: contents;
+  }
+
+  .client-logo-marquee__set--duplicate {
+    display: none;
+  }
+
+  .client-logo-marquee__logo {
+    flex: 0 1 136px;
   }
 }
 

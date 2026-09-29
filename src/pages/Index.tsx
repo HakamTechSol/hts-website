@@ -156,6 +156,17 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="bg-gradient-to-b from-white to-slate-50 px-4 pb-7 pt-10 text-center sm:pb-9 sm:pt-12" aria-labelledby="trusted-clients-heading">
+          <div className="mx-auto max-w-2xl">
+            <div aria-hidden="true" className="mx-auto mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-sky-400 to-violet-500" />
+            <h2 id="trusted-clients-heading" className="text-sm font-extrabold uppercase tracking-[0.16em] text-slate-900 sm:text-base">
+              Trusted by <span className="bg-gradient-to-r from-[#0f6cbd] to-violet-500 bg-clip-text text-transparent">Innovative Teams</span>
+            </h2>
+            <p className="mx-auto mt-2 max-w-xl text-xs leading-relaxed text-slate-500 sm:text-sm">
+              We’re proud to work with amazing companies around the world, helping them build better products and achieve their goals.
+            </p>
+          </div>
+        </section>
         <ClientLogoMarquee />
 
         {/* 2. Featured Case Studies Section (With 3D Card Flip Effect!) */}
