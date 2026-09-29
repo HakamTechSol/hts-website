@@ -67,12 +67,6 @@ const ProjectDetail: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               {/* Left Details */}
               <div className="lg:col-span-7 space-y-6">
-                <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="px-3.5 py-1 rounded-full bg-[#0f6cbd] text-white text-xs font-extrabold uppercase tracking-wide">
-                    {project.badge}
-                  </span>
-                </div>
-
                 <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
                   {project.title}
                 </h1>
@@ -275,15 +269,42 @@ const ProjectDetail: React.FC = () => {
           </div>
         </section>
 
+        {/* Previous and next case study navigation */}
+        <section className="py-10 bg-slate-50 border-t border-slate-200 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
+            <Link
+              to={`/portfolio/${prevProject.id}`}
+              className="w-full sm:w-auto p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0f6cbd] transition-all flex items-center gap-4 group shadow-sm"
+            >
+              <ArrowLeft className="w-5 h-5 text-slate-400 group-hover:text-[#0f6cbd] transition-colors" />
+              <div>
+                <div className="text-[10px] font-bold text-slate-400 uppercase">Previous Case Study</div>
+                <div className="text-sm font-bold text-slate-800 group-hover:text-[#0f6cbd]">{prevProject.title}</div>
+              </div>
+            </Link>
+
+            <Link
+              to={`/portfolio/${nextProject.id}`}
+              className="w-full sm:w-auto p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0f6cbd] transition-all flex items-center justify-end text-right gap-4 group shadow-sm"
+            >
+              <div>
+                <div className="text-[10px] font-bold text-slate-400 uppercase">Next Case Study</div>
+                <div className="text-sm font-bold text-slate-800 group-hover:text-[#0f6cbd]">{nextProject.title}</div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0f6cbd] transition-colors" />
+            </Link>
+          </div>
+        </section>
+
         {/* Dedicated quote call to action */}
-        <section className="relative isolate overflow-hidden bg-[#0b1124] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8">
+        <section className="relative isolate overflow-hidden bg-white px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-blue-600/15 blur-[100px]" />
             <div className="absolute -right-16 bottom-0 h-96 w-96 rounded-full bg-violet-600/15 blur-[110px]" />
             <div className="absolute inset-x-0 bottom-0 h-40 opacity-[0.08]" style={{ backgroundImage: "radial-gradient(ellipse at bottom, transparent 45%, #60a5fa 46%, transparent 46.5%)", backgroundSize: "100% 100%" }} />
           </div>
           <div className="container mx-auto max-w-6xl">
-            <div className="relative grid overflow-hidden rounded-[2rem] border border-sky-400/20 bg-gradient-to-br from-slate-900/95 via-[#111a33]/95 to-indigo-950/80 p-7 shadow-[0_0_80px_-35px_rgba(59,130,246,0.55)] backdrop-blur-xl sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-8 lg:p-14">
+            <div className="relative grid overflow-hidden rounded-[2rem] border border-sky-400/20 bg-gradient-to-br from-slate-900 via-[#111a33] to-indigo-950 p-7 shadow-[0_20px_70px_-30px_rgba(15,23,42,0.55)] sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-8 lg:p-14">
               <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(ellipse_at_top_left,rgba(14,165,233,0.10),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(139,92,246,0.10),transparent_45%)]" />
               <div className="relative z-10 text-center lg:text-left">
                 <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-gradient-to-r from-sky-500/15 to-indigo-500/15 px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-sky-300 shadow-[0_0_24px_-12px_rgba(56,189,248,0.7)]">
@@ -432,33 +453,6 @@ const ProjectDetail: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* 7. Bottom Navigation */}
-        <section className="py-10 bg-slate-50 border-t border-slate-200 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
-            <Link
-              to={`/portfolio/${prevProject.id}`}
-              className="w-full sm:w-auto p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0f6cbd] transition-all flex items-center gap-4 group shadow-sm"
-            >
-              <ArrowLeft className="w-5 h-5 text-slate-400 group-hover:text-[#0f6cbd] transition-colors" />
-              <div>
-                <div className="text-[10px] font-bold text-slate-400 uppercase">Previous Case Study</div>
-                <div className="text-sm font-bold text-slate-800 group-hover:text-[#0f6cbd]">{prevProject.title}</div>
-              </div>
-            </Link>
-
-            <Link
-              to={`/portfolio/${nextProject.id}`}
-              className="w-full sm:w-auto p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0f6cbd] transition-all flex items-center justify-end text-right gap-4 group shadow-sm"
-            >
-              <div>
-                <div className="text-[10px] font-bold text-slate-400 uppercase">Next Case Study</div>
-                <div className="text-sm font-bold text-slate-800 group-hover:text-[#0f6cbd]">{nextProject.title}</div>
-              </div>
-              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0f6cbd] transition-colors" />
-            </Link>
           </div>
         </section>
 

@@ -145,7 +145,7 @@ export const projectArchitectures: Record<string, { title: string; description: 
 export const projectsData: Project[] = [
   {
     id: "kls-property-portal",
-    title: "KLS",
+    title: "KLS-Property Mangment System",
     subtitle: "Robust Property Management Software Designed for Real Estate Professionals",
     category: "Web Application",
     client: "KLS Real Estate Group",
@@ -223,7 +223,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "parking-alert-app",
-    title: "PARKING ALERT APP",
+    title: "Parking Alert App",
     subtitle: "Community-Driven Mobile App for Smart Vehicle Parking Coordination",
     category: "Mobile App",
     client: "Urban Mobility Solutions",
@@ -291,7 +291,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "players-evaluation-system",
-    title: "FOOTBALLER",
+    title: "Players Evaluation System",
     subtitle: "Data-Driven Sports Performance & Player Trait Evaluation Platform",
     category: "SaaS & Analytics",
     client: "Apex Sports Academy & League Management",
@@ -372,7 +372,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "learning-management-system",
-    title: "LEARNING MANAGEMENT SYSTEM",
+    title: "Learning Management System",
     subtitle: "Study Al-Quran Learning Portal App for Students & Teachers",
     category: "EdTech",
     client: "Al-Quran Global Educational Trust",
@@ -442,7 +442,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "hospital-management-system",
-    title: "HOSPITAL MANAGEMENT SYSTEM",
+    title: "Hospital Management System",
     subtitle: "Complete Digital Platform for Patient Visits, Surgical History & Clinical Records",
     category: "Healthcare System",
     client: "Jinnah Eye & General Hospital Network",
@@ -510,7 +510,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "angelopoulos-loyalty-app",
-    title: "ANGELOPOULOS LOYALTY APP",
+    title: "Angelopoulos Loyalty App",
     subtitle: "Digital Rewards App for Angelopoulos Hair & Beauty Customers",
     category: "Mobile App",
     client: "Angelopoulos Hair & Beauty",
@@ -565,7 +565,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "matchpro-operations-platform",
-    title: "MYPLAYS",
+    title: "MyPlays",
     subtitle: "Operations Management Platform for Gaming & Points-Based Businesses",
     category: "SaaS & Analytics",
     client: "MyPlays / MatchPro",
@@ -624,7 +624,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "khyratna-ecommerce-app",
-    title: "KHYRATNA",
+    title: "Khyratna",
     subtitle: "Cross-Platform Shopping Experience for Modern Consumers",
     category: "Mobile App",
     client: "Khyratna",
@@ -682,7 +682,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "notary-management-system",
-    title: "NOTARY MANAGEMENT SYSTEM",
+    title: "Notary Management System",
     subtitle: "Secure, Centralized Legal Workflow Platform for Notaries and Legal Professionals",
     category: "Web Application",
     client: "Notary System",
@@ -740,8 +740,8 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "social-media-app",
-    title: "Social Media App",
+    id: "ZeoChat-social-media-app",
+    title: "ZeoChat-Social Media App",
     subtitle: "Cross-platform social discovery app for tourists, explorers, and local guides",
     category: "Mobile App",
     client: "",

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Search, Sparkles, Code2, Layers } from "lucide-react";
+import { Search } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
@@ -15,23 +14,25 @@ const categories = [
   "All",
   "Web Application",
   "Mobile Application",
-  "SaaS & Analytics",
-  "EdTech",
-  "Healthcare System",
 ];
+
+const normalize = (value: string) => value.normalize("NFKD").toLocaleLowerCase().trim();
 
 const Portfolio: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const location = useLocation();
   const selectedCategory = new URLSearchParams(location.search).get('category') || 'All';
+  const normalizedQuery = normalize(searchQuery);
 
   const filteredProjects = projectsData.filter((project) => {
-    const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
-    const matchesSearch =
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.techStack.some((tech) => tech.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      project.keyFeatures.some((feat) => feat.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === "All" ||
+      (selectedCategory === "Mobile Application" ? project.category === "Mobile App" : project.category === selectedCategory);
+    const searchableText = [
+      project.title, project.subtitle, project.category, project.client, project.role,
+      project.summary, project.fullDescription, ...project.techStack, ...project.keyFeatures,
+      ...project.challenges, ...project.solutions,
+    ].join(" ");
+    const matchesSearch = !normalizedQuery || normalize(searchableText).includes(normalizedQuery);
     return matchesCategory && matchesSearch;
   });
 
@@ -96,7 +97,7 @@ const Portfolio: React.FC = () => {
                     key={cat}
                     to={`/portfolio${cat === "All" ? "" : `?category=${encodeURIComponent(cat)}`}`}
                     className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
-                      (new URLSearchParams(window.location.search).get('category') || 'All') === cat
+                      selectedCategory === cat
                         ? "bg-[#0f6cbd] text-white shadow-md scale-105"
                         : "border border-white/40 bg-white/10 text-white backdrop-blur-sm hover:border-sky-300 hover:bg-white/20"
                     }`}

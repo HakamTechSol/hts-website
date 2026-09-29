@@ -97,37 +97,24 @@ export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ project }) => 
               </div>
               <PlatformBadges platforms={project.platforms} size="compact" />
             </div>
-          </div>
 
-          {/* Key Metrics Stats Grid */}
-          <div className="space-y-3 pt-3 border-t border-sky-200">
-            <div className="grid grid-cols-3 gap-2 text-center">
-              <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-xs sm:text-base font-extrabold text-slate-900">
-                  {project.metrics[0]?.value || "500K+"}
-                </div>
-                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
-                  Active Users
-                </div>
+            {/* Technologies Used */}
+            <div className="space-y-1 pt-1">
+              <div className="text-[10px] font-extrabold text-slate-700 uppercase tracking-wider">
+                Technologies used
               </div>
-              <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-xs sm:text-base font-extrabold text-slate-900">
-                  {project.metrics[1]?.value || "4.9/5.0"}
-                </div>
-                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
-                  User Rating
-                </div>
-              </div>
-              <div className="p-2 rounded-xl bg-white border border-sky-100 shadow-sm">
-                <div className="text-xs sm:text-base font-extrabold text-slate-900">
-                  {project.metrics[2]?.value || "60%"}
-                </div>
-                <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
-                  Retention Rate
-                </div>
+              <div className="flex flex-wrap gap-1.5">
+                {project.techStack.map((technology) => (
+                  <span key={technology} className="rounded-full border border-sky-200 bg-white px-2.5 py-1 text-[10px] font-semibold text-slate-600">
+                    {technology}
+                  </span>
+                ))}
               </div>
             </div>
+          </div>
 
+          {/* View Case Study Clickable Link */}
+          <div className="pt-3 border-t border-sky-200">
             {/* View Case Study Clickable Link */}
             <Link
               to={`/portfolio/${project.id}`}

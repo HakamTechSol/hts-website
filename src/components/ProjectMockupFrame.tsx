@@ -60,15 +60,6 @@ export const ProjectMockupFrame: React.FC<ProjectMockupFrameProps> = ({ project,
         <div className="flex items-center gap-3">
           <img src={logo} alt="HakamTechSol Logo" className="h-7 w-auto object-contain" />
         </div>
-        <div className="flex items-center gap-2">
-          <span className="hidden sm:inline-block text-[11px] font-semibold tracking-wider text-slate-600 uppercase">
-            Case Study Showcase
-          </span>
-          <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-sky-100 text-sky-700">
-            {getIcon()}
-            <span>{project.badge}</span>
-          </span>
-        </div>
       </div>
 
       {/* Hero Visual Area */}
