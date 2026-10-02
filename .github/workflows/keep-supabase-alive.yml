@@ -1,13 +1,19 @@
 ﻿name: Keep Supabase Alive
 
 on:
+  push:
+    branches: [main]      # jab bhi main branch par code push ho
   schedule:
-    - cron: '17 2 * * *'   # roz 02:17 UTC (07:17 PKT), off-peak minute taake GitHub delay kam ho
+    - cron: '17 2 * * *'   # roz 02:17 UTC (07:17 PKT)
   workflow_dispatch:
 
 permissions:
   actions: write
   contents: read
+
+concurrency:
+  group: keep-supabase-alive
+  cancel-in-progress: true   # push par bar bar push karo to purana run cancel, naya chale
 
 jobs:
   ping-supabase:
