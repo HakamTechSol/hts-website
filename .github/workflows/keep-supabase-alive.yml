@@ -1,4 +1,4 @@
-name: Keep Supabase Alive
+﻿name: Keep Supabase Alive
 
 on:
   schedule:
@@ -10,19 +10,27 @@ jobs:
   ping-supabase:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase Database REST API
+      - name: Ping Supabase Auth health endpoint
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://ffileadkgcrmeuwwinsb.supabase.co' }}
           SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'sb_publishable_RmlKYCKpllbYwl1Zf7-Opg_8DHUQAeZ' }}
         run: |
-          echo "Pinging Supabase REST API at $SUPABASE_URL ..."
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            -H "apikey: $SUPABASE_ANON_KEY" \
-            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
-            "$SUPABASE_URL/rest/v1/contact_messages?select=id&limit=1")
-          echo "Supabase response HTTP Status: $STATUS"
-          if [ "$STATUS" -eq 200 ] || [ "$STATUS" -eq 204 ] || [ "$STATUS" -eq 404 ]; then
-            echo "Successfully pinged Supabase project. Project remains active!"
-          else
-            echo "Ping sent. HTTP Status: $STATUS"
+          set -euo pipefail
+
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "SUPABASE_URL and SUPABASE_ANON_KEY must be configured."
+            exit 1
           fi
+
+          echo "Checking Supabase at $SUPABASE_URL ..."
+          STATUS=$(curl --silent --show-error --output /dev/null --write-out "%{http_code}" \
+            --retry 5 --retry-all-errors --retry-delay 5 \
+            --connect-timeout 10 --max-time 30 \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            "$SUPABASE_URL/auth/v1/health")
+          echo "Supabase response HTTP Status: $STATUS"
+          if [ "$STATUS" -lt 200 ] || [ "$STATUS" -ge 300 ]; then
+            echo "Supabase health check failed with HTTP $STATUS."
+            exit 1
+          fi
+          echo "Supabase health check succeeded."
