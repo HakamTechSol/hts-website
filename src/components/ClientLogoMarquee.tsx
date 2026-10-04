@@ -1,6 +1,6 @@
 import angelopoulosLogo from "@/assets/client-logos/angelopoulos.png";
 import brothersConsultantsLogo from "@/assets/client-logos/brothers-consultants.png";
-import chronosLogo from "@/assets/client-logos/chronos.jpeg";
+import chronosLogo from "@/assets/client-logos/chronos.png";
 import clearSkyPowerLogo from "@/assets/client-logos/clearshky-power.png";
 import cytrusLogicLogo from "@/assets/client-logos/cytrus-logic.jpg.jpeg";
 import dwsLogo from "@/assets/client-logos/DWS.webp";
