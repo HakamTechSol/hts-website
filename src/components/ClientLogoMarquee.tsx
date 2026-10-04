@@ -24,6 +24,9 @@ import techbyteInnovationsLogo from "@/assets/client-logos/techbyte-innovations.
 import verifixedLogo from "@/assets/client-logos/verifixed.png";
 import waysLogo from "@/assets/client-logos/ways.png";
 import xitLogo from "@/assets/client-logos/xit.png";
+import nataMartLogo from "@/assets/client-logos/nata-mart.png";
+import studyAlQuranLogo from "@/assets/client-logos/study-al-quran.png";
+import texasMedicalLogo from "@/assets/client-logos/texas-medical.png";
 
 const clientLogos = [
   { src: angelopoulosLogo, alt: "Angelopoulos" },
@@ -52,6 +55,9 @@ const clientLogos = [
   { src: verifixedLogo, alt: "Verifixed" },
   { src: waysLogo, alt: "Ways" },
   { src: xitLogo, alt: "XIT" },
+  { src: nataMartLogo, alt: "Nata Mart" },
+  { src: studyAlQuranLogo, alt: "Study Al Quran" },
+  { src: texasMedicalLogo, alt: "Texas Medical" },
 ];
 
 const LogoSet = ({ duplicate = false }: { duplicate?: boolean }) => (
