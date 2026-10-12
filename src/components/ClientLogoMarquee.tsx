@@ -27,25 +27,34 @@ import xitLogo from "@/assets/client-logos/xit.png";
 import nataMartLogo from "@/assets/client-logos/nata-mart.png";
 import studyAlQuranLogo from "@/assets/client-logos/study-al-quran.png";
 import texasMedicalLogo from "@/assets/client-logos/texas-medical.png";
+import ismMartLogo from "@/assets/client-logos/ism-mart.png";
+import mate10Logo from "@/assets/client-logos/mate-10.png";
+import profHelpLogo from "@/assets/client-logos/profhelp.png";
+import interactiveBrokersLogo from "@/assets/client-logos/interactive-brokers.png";
+import idealzLogo from "@/assets/client-logos/idealz.png";
 
 const clientLogos = [
   { src: angelopoulosLogo, alt: "Angelopoulos" },
+  { src: ismMartLogo, alt: "ISM Mart" },
   { src: brothersConsultantsLogo, alt: "Brothers Consultants" },
+  { src: studyAlQuranLogo, alt: "Study Al Quran" },
   { src: chronosLogo, alt: "Chronos" },
+  { src: nataMartLogo, alt: "Nata Mart" },
   { src: clearSkyPowerLogo, alt: "ClearSky Power" },
+  { src: texasMedicalLogo, alt: "Texas Medical" },
   { src: cytrusLogicLogo, alt: "Cytrus Logic" },
-  { src: dwsLogo, alt: "DWS" },
   { src: eliteDentalCareersLogo, alt: "Elite Dental Careers" },
-  { src: enfixoLogo, alt: "Enfixo" },
+  { src: dwsLogo, alt: "DWS" },
   { src: grantsBakeryLogo, alt: "Grants Bakery" },
+  { src: enfixoLogo, alt: "Enfixo" },
   { src: hayyakLogo, alt: "Hayyak" },
   { src: hrAssessorAuditLogo, alt: "HR Assessor & Audit" },
   { src: jnclmLogo, alt: "JNCLM" },
   { src: khyratnaLogo, alt: "Khyratna" },
-  { src: klsLogo, alt: "KLS" },
   { src: notaryLogo, alt: "Notary" },
   { src: nrgLogo, alt: "NRG" },
   { src: nrgAiLogo, alt: "NRG AI" },
+  { src: klsLogo, alt: "KLS" },
   { src: nugalValleySchoolLogo, alt: "Nugal Valley School" },
   { src: parxLogo, alt: "Parx Industries International" },
   { src: pestIqLogo, alt: "Pest IQ" },
@@ -55,9 +64,10 @@ const clientLogos = [
   { src: verifixedLogo, alt: "Verifixed" },
   { src: waysLogo, alt: "Ways" },
   { src: xitLogo, alt: "XIT" },
-  { src: nataMartLogo, alt: "Nata Mart" },
-  { src: studyAlQuranLogo, alt: "Study Al Quran" },
-  { src: texasMedicalLogo, alt: "Texas Medical" },
+  { src: mate10Logo, alt: "Mate 10" },
+  { src: profHelpLogo, alt: "Prof Help" },
+  { src: interactiveBrokersLogo, alt: "Interactive Brokers" },
+  { src: idealzLogo, alt: "Idealz" },
 ];
 
 const LogoSet = ({ duplicate = false }: { duplicate?: boolean }) => (

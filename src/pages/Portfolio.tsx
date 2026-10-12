@@ -26,7 +26,7 @@ const Portfolio: React.FC = () => {
 
   const filteredProjects = projectsData.filter((project) => {
     const matchesCategory = selectedCategory === "All" ||
-      (selectedCategory === "Mobile Application" ? project.category === "Mobile App" : project.category === selectedCategory);
+      (selectedCategory === "Mobile Application" ? project.category === "Mobile Application" : project.category === selectedCategory);
     const searchableText = [
       project.title, project.subtitle, project.category, project.client, project.role,
       project.summary, project.fullDescription, ...project.techStack, ...project.keyFeatures,

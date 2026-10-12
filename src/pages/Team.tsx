@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import { TeamCard } from "@/components/TeamCard";
 import { teamMembers } from "@/data/teamData";
 
-const teamOrder = ["Arbaz Ali", "Fahad Mujtaba", "Hunain Haider", "Sanawar Hussain Jaffri", "Mustufa Ali", "Talha Khan"];
+const teamOrder = ["Arbaz Ali", "Fahad Mujtaba", "Hunain Haider", "Mustufa Ali", "Talha Khan"];
 const orderedTeamMembers = [...teamMembers].sort((a, b) => teamOrder.indexOf(a.name) - teamOrder.indexOf(b.name));
 
 const Team = () => (
