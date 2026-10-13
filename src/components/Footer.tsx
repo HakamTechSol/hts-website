@@ -72,9 +72,9 @@ const Footer = () => {
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Custom Software Development</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Web Development & Portals</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">CMS Development</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Digital Marketing</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Game Development</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Graphic Designing</Link></li>
-              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Social Media Marketing</Link></li>
+              <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Digital Marketing</Link></li>
               <li><Link to="/services" className="hover:text-[#f97316] transition-colors">Staff Augmentation</Link></li>
             </ul>
           </div>

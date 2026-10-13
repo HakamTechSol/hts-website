@@ -150,7 +150,7 @@ const Quote = () => {
                           <option>CMS Development</option>
                           <option>AI & Automations</option>
                           <option>Graphic Designing</option>
-                          <option>Social Media Marketing</option>
+                          <option>Game Development</option>
                           <option>Digital Marketing</option>
                           <option>Staff Augmentation</option>
                         </select>

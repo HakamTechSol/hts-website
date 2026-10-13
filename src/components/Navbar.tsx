@@ -9,6 +9,10 @@ import technologiesDropdownImage from "@/assets/technologies-dropdown.png";
 
 const servicesMegaMenu = [
   {
+    category: "AI & Automations",
+    items: ["Generative AI", "Natural Language Processing", "AI Agent Development"],
+  },
+  {
     category: "Mobile App Development",
     items: ["iOS App Development", "Android App Development", "Cross Platform App Development"],
   },
@@ -29,16 +33,12 @@ const servicesMegaMenu = [
     items: ["2D Game Development", "3D Game Development", "Web3 Game Development"],
   },
   {
-    category: "AI & Automations",
-    items: ["Generative AI", "Natural Language Processing", "AI Agent Development"],
-  },
-  {
     category: "Staff Augmentation",
     items: ["Hire Android App Developer", "Hire iOS App Developer", "Hire NodeJs Developer"],
   },
   {
-    category: "Blockchain Development",
-    items: ["Metaverse Development", "NFT Development"],
+    category: "Graphic Designing",
+    items: ["Post Creation", "Logo Designing", "UI/UX Designing"],
   },
   {
     category: "Digital Marketing Services",

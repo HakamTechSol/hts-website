@@ -1,8 +1,6 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight, CheckCircle2, Code2, Smartphone, Star, Users, Zap, Database,
-  Sparkles, Trophy, Cpu, Building2, Stethoscope, GraduationCap, Car, ShoppingCart, Activity, PenTool, Megaphone, Clock3, Landmark, Truck, Plane, Clapperboard, Factory
+  ArrowRight, Code2, Smartphone, Users, Database, Trophy, Cpu, Building2, Stethoscope, GraduationCap, Car, ShoppingCart, Gamepad, PenTool, Megaphone, Clock3, Landmark, Truck, Plane, Clapperboard, Factory
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -12,10 +10,6 @@ import SEO from "@/components/SEO";
 import { ProjectFlipCard } from "@/components/ProjectFlipCard";
 import ClientLogoMarquee from "@/components/ClientLogoMarquee";
 import { projectsData } from "@/data/projectsData";
-import webDevImage from "@/assets/web-dev.jpg";
-import mobileDevImage from "@/assets/mobile-dev.jpg";
-import freelanceImage from "@/assets/freelance.jpg";
-import teamImage from "@/assets/team.jpg";
 import homeHeroVideo from "@/assets/home-hero-technology.mp4";
 import automotiveImage from "@/assets/industries/automotive.jpg";
 import healthcareImage from "@/assets/industries/healthcare.jpg";
@@ -46,9 +40,9 @@ const servicesList = [
     icon: Database,
   },
   {
-    category: "Digital Marketing",
-    desc: "Data-led digital marketing strategies that build visibility, engagement, and measurable growth.",
-    icon: Megaphone,
+    category: "Game Development",
+    desc: "Immersive game design and development strategies that build engaging worlds, smooth mechanics, and scalable experiences.",
+    icon: Gamepad,
   },
   {
     category: "Graphic Designing",
@@ -56,7 +50,7 @@ const servicesList = [
     icon: PenTool,
   },
   {
-    category: "Social Media Marketing",
+    category: "Digital Marketing",
     desc: "Audience-focused social strategy, content, and performance campaigns that drive growth.",
     icon: Megaphone,
   },

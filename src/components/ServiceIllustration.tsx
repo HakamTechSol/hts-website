@@ -9,6 +9,7 @@ type ServiceIllustrationType =
   | "design"
   | "marketing"
   | "cloud"
+  | "game-development"
   | "team";
 
 interface ServiceIllustrationProps {
@@ -38,6 +39,7 @@ export const ServiceIllustration: React.FC<ServiceIllustrationProps> = ({ type }
     marketing: <><rect x="27" y="24" width="34" height="47" rx="6" fill="#effaff" {...shared} /><rect x="67" y="15" width="38" height="56" rx="6" fill="#dff3ff" stroke="#38bdf8" strokeWidth="3" /><path d="M35 43h18M35 51h12M75 30h22M75 39h16" {...shared} /><path d="M35 63l9-8 8 4M75 59l8-10 7 6 9-15" {...shared} /><path d="M100 38l-1 7-6-3" fill="#0f6cbd" /><circle cx="113" cy="25" r="9" fill="#fff" stroke="#0f6cbd" strokeWidth="3" /><path d="M109 25h8M113 21v8" {...shared} /></>,
     cloud: <><path d="M37 65h63a15 15 0 0 0 0-30 23 23 0 0 0-43-5 17 17 0 0 0-20 35z" fill="#effaff" {...shared} /><rect x="48" y="52" width="18" height="17" rx="3" fill="#fff" stroke="#38bdf8" strokeWidth="2" /><rect x="71" y="52" width="18" height="17" rx="3" fill="#fff" stroke="#38bdf8" strokeWidth="2" /><circle cx="54" cy="60" r="2" fill="#0f6cbd" /><circle cx="77" cy="60" r="2" fill="#0f6cbd" /><path d="M57 80v-7M80 80v-7M44 80h49" {...shared} /></>,
     team: <><circle cx="51" cy="32" r="10" fill="#bfdbfe" stroke="#0f6cbd" strokeWidth="3" /><circle cx="82" cy="28" r="10" fill="#dff3ff" stroke="#38bdf8" strokeWidth="3" /><circle cx="101" cy="49" r="8" fill="#bfdbfe" stroke="#0f6cbd" strokeWidth="3" /><path d="M35 72c1-15 29-15 31 0" fill="#effaff" {...shared} /><path d="M65 68c2-18 32-18 34 0" fill="#dff3ff" {...shared} /><path d="M90 73c1-11 20-11 22 0" fill="#effaff" {...shared} /><path d="M31 79h82" {...shared} /></>,
+    "game-development": <><rect x="25" y="16" width="91" height="62" rx="8" fill="#effaff" {...shared} /><path d="M25 31h91" {...shared} /><circle cx="35" cy="24" r="2" fill="#0f6cbd" /><circle cx="43" cy="24" r="2" fill="#38bdf8" /><path d="M37 42h33v25H37z" fill="#fff" stroke="#7dd3fc" strokeWidth="2" /><path d="M78 42h27M78 51h20M78 60h25" {...shared} /><circle cx="53" cy="55" r="8" fill="#dff3ff" stroke="#38bdf8" strokeWidth="2" /></>,
   };
 
   return <svg viewBox="0 0 132 96" role="img" aria-label="" className="h-full w-full max-w-[132px]" preserveAspectRatio="xMidYMid meet">{illustrations[type]}</svg>;
