@@ -32,10 +32,17 @@ import mate10Logo from "@/assets/client-logos/mate-10.png";
 import profHelpLogo from "@/assets/client-logos/profhelp.png";
 import interactiveBrokersLogo from "@/assets/client-logos/interactive-brokers.png";
 import idealzLogo from "@/assets/client-logos/idealz.png";
+import extendiCareLogo from "@/assets/client-logos/extendicare.png";
+import iimpact360Logo from "@/assets/client-logos/iimpact-360.jpg";
+import onEarthFoundationLogo from "@/assets/client-logos/on-earth-foundation.png";
+import keraLogo from "@/assets/client-logos/kera.jpeg";
+import unlistedPropertiesLogo from "@/assets/client-logos/unlisted-properties.png";
+import birizeLogo from "@/assets/client-logos/birize.jpeg";
+import blackFyreLogo from "@/assets/client-logos/black-fyre.png";
+import dubaiJewellersLogo from "@/assets/client-logos/dubai-jewellers.png";
 
 const clientLogos = [
   { src: angelopoulosLogo, alt: "Angelopoulos" },
-  { src: ismMartLogo, alt: "ISM Mart" },
   { src: brothersConsultantsLogo, alt: "Brothers Consultants" },
   { src: studyAlQuranLogo, alt: "Study Al Quran" },
   { src: chronosLogo, alt: "Chronos" },
@@ -47,16 +54,17 @@ const clientLogos = [
   { src: dwsLogo, alt: "DWS" },
   { src: grantsBakeryLogo, alt: "Grants Bakery" },
   { src: enfixoLogo, alt: "Enfixo" },
+  { src: parxLogo, alt: "Parx Industries International" },
   { src: hayyakLogo, alt: "Hayyak" },
-  { src: hrAssessorAuditLogo, alt: "HR Assessor & Audit" },
-  { src: jnclmLogo, alt: "JNCLM" },
   { src: khyratnaLogo, alt: "Khyratna" },
+  { src: hrAssessorAuditLogo, alt: "HR Assessor & Audit" },
+  { src: ismMartLogo, alt: "ISM Mart" },
+  { src: jnclmLogo, alt: "JNCLM" },
   { src: notaryLogo, alt: "Notary" },
   { src: nrgLogo, alt: "NRG" },
   { src: nrgAiLogo, alt: "NRG AI" },
   { src: klsLogo, alt: "KLS" },
   { src: nugalValleySchoolLogo, alt: "Nugal Valley School" },
-  { src: parxLogo, alt: "Parx Industries International" },
   { src: pestIqLogo, alt: "Pest IQ" },
   { src: pureWaterLogo, alt: "Pure Water" },
   { src: sweetRideCafeLogo, alt: "Sweet Ride Cafe" },
@@ -68,6 +76,14 @@ const clientLogos = [
   { src: profHelpLogo, alt: "Prof Help" },
   { src: interactiveBrokersLogo, alt: "Interactive Brokers" },
   { src: idealzLogo, alt: "Idealz" },
+  { src: iimpact360Logo, alt: "iimpact360" },
+  { src: extendiCareLogo, alt: "ExtendiCare" },
+  { src: keraLogo, alt: "Kera" },
+  { src: onEarthFoundationLogo, alt: "On Earth Foundation" },
+  { src: unlistedPropertiesLogo, alt: "Unlisted Properties" },
+  { src: blackFyreLogo, alt: "Black Fyre" },
+  { src: birizeLogo, alt: "Birize" },
+  { src: dubaiJewellersLogo, alt: "Dubai Jewellers" }
 ];
 
 const LogoSet = ({ duplicate = false }: { duplicate?: boolean }) => (

@@ -100,13 +100,16 @@ import podAppCoverImage from "@/assets/pod-mobile-app/pod-app-cover.jfif";
 import podAppSettingsImage from "@/assets/pod-mobile-app/app-settings.jpeg";
 import podLogoImage from "@/assets/pod-mobile-app/logo.jpeg";
 import podDashboardImage from "@/assets/pod-mobile-app/dashboard.jpeg";
+import dubaiJewellerySoftwareCoverImage from "@/assets/dubai-jewellery-software/cover-image.png";
+import dubaiJewellerySoftwareLoginImage from "@/assets/dubai-jewellery-software/login.png";
+import dubaiJewellerySoftwareManagementDashboardImage from "@/assets/dubai-jewellery-software/management-dashboard.png";
+import dubaiJewellerySoftwareManufacturingDashboardImage from "@/assets/dubai-jewellery-software/manufacturing-dashboard.png";
 
 export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  category: "Web Application" | "Mobile Application";
-  role: string;
+  category: "Web Application" | "Mobile Application" | "Desktop Application";
   summary: string;
   fullDescription: string;
   techStack: string[];
@@ -115,7 +118,7 @@ export interface Project {
   solutions: string[];
   gradient: string;
   badge: string;
-  platforms: ("appStore" | "googlePlay" | "webPortal")[];
+  platforms: ("appStore" | "googlePlay" | "webPortal" | "desktop")[];
   rolesSupported: string[];
   mockupScreens: { title: string; subtitle: string; description: string }[];
   visualImages?: {
@@ -153,7 +156,6 @@ export const projectsData: Project[] = [
     title: "KLS - Property Mangment System",
     subtitle: "Robust Property Management Software Designed for Real Estate Professionals",
     category: "Web Application",
-    role: "Full-Stack Development & Architecture",
     summary: "Enables efficient property listing, management, and collaboration through a centralized platform with two core user roles: Administrator and Agent.",
     fullDescription: "KLS is a robust Property Management Software designed specifically for real estate professionals. It enables efficient property listing, management, and collaboration through a centralized platform with two core user roles: Administrator and Agent. It has been developed using the latest web technologies, including LARAVEL, MySQL, & PHP, ensuring high performance, bank-grade security, and seamless property workflow automation.",
     techStack: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "REST API", "Blade Engine"],
@@ -222,7 +224,6 @@ export const projectsData: Project[] = [
     title: "Parking Alert App",
     subtitle: "Community-Driven Mobile App for Smart Vehicle Parking Coordination",
     category: "Mobile Application",
-    role: "Mobile UI/UX Design & FlutterFlow Development",
     summary: "A community-driven mobile app that helps car owners coordinate parking with one another instantly using license plate alerts and real-time push notifications.",
     fullDescription: "Getting stuck because someone's car is blocking your way can throw off your entire routine. To solve this everyday frustration, we've built a community-driven app that helps car owners coordinate parking with one another. Developed using modern technologies like Flutterflow and Firebase, the app ensures seamless communication, real-time vehicle alerts, and smarter parking management across iOS and Android.",
     techStack: ["FlutterFlow", "Firebase", "Flutter", "FCM Push Notifications", "Dart", "Cloud Functions"],
@@ -281,7 +282,6 @@ export const projectsData: Project[] = [
     title: "Players Evaluation System",
     subtitle: "Data-Driven Sports Performance & Player Trait Evaluation Platform",
     category: "Web Application",
-    role: "Full Platform Engineering & Analytics Dashboard",
     summary: "Smart digital platform designed to evaluate player behavior, monitor team performance, and deliver data-driven insights empowering coaches and sports organizations.",
     fullDescription: "A smart digital platform designed to evaluate player behavior, monitor team performance, and deliver data-driven insights that empower coaches, teams, and sports organizations to make informed decisions, optimize strategies, and improve overall performance. Built with advanced data modeling, including Poisson Probability Frameworks and multi-trait rating modules.",
     techStack: ["React", "TypeScript", "Node.js", "Python Data Engine", "MySQL", "Recharts", "Tailwind CSS"],
@@ -353,7 +353,6 @@ export const projectsData: Project[] = [
     title: "Study Al-Quran - LMS",
     subtitle: "Study Al-Quran Learning Portal App for Students & Teachers",
     category: "Mobile Application",
-    role: "Cross-Platform Mobile App & Admin Portal",
     summary: "Intuitive Learning Portal App to support students and teachers in accessing Quran education resources, managing profiles, and enhancing the learning experience.",
     fullDescription: "Developed an intuitive Learning Portal App to support students and teachers in accessing Quran education resources, managing profiles, tracking daily attendance, and enhancing the learning experience. Built for seamless cross-platform performance on Android and iOS with multi-language support (Arabic, English, Urdu) and multi-admin access control.",
     techStack: ["FlutterFlow", "Firebase", "React Native", "Node.js API", "Multi-Language i18n", "Cloud Storage"],
@@ -414,7 +413,6 @@ export const projectsData: Project[] = [
     title: "Hospital Management System",
     subtitle: "Complete Digital Platform for Patient Visits, Surgical History & Clinical Records",
     category: "Web Application",
-    role: "Full System Development & Medical Records Architecture",
     summary: "A complete digital platform to manage patients, visits, investigations, clinical records, surgical history, and reports – all in one secure and easy-to-use system.",
     fullDescription: "A complete digital platform to manage patients, visits, investigations, clinical records, surgical history, and reports – all in one secure and easy-to-use system designed to digitalize day-to-day tasks within hospitals. The system is developed using the latest web technologies, including PHP & MySQL, offering high-security clinical record storage, ophthalmology photo slot management, and surgical audit logs.",
     techStack: ["PHP", "MySQL", "JavaScript", "HTML5/CSS3", "TCPDF / Dompdf", "AJAX DataTables"],
@@ -473,7 +471,6 @@ export const projectsData: Project[] = [
     title: "Angelopoulos - Loyalty App",
     subtitle: "Digital Rewards App for Angelopoulos Hair & Beauty Customers",
     category: "Mobile Application",
-    role: "Flutter & Firebase Mobile App Development",
     summary: "A modern loyalty rewards app designed to strengthen customer engagement and encourage repeat purchases through a simple, digital points experience.",
     fullDescription: "Developed a modern Loyalty Rewards App for Angelopoulos Hair & Beauty to improve customer engagement and increase repeat purchases through a smart digital rewards system. Built with Flutter and Firebase, the app is well suited to salons, barber shops, restaurants, coffee shops, grocery shops, and similar customer-focused businesses.",
     techStack: ["Flutter", "Firebase", "REST API", "ERP Integration", "Barcode Scanner", "Push Notifications"],
@@ -519,7 +516,6 @@ export const projectsData: Project[] = [
     title: "MyPlays - Arcade Game Management System",
     subtitle: "Operations Management Platform for Gaming & Points-Based Businesses",
     category: "Web Application",
-    role: "Full-Stack Operations Platform Development",
     summary: "Centralized role-based software for managing customers, check-ins, match points, ticket-outs, machines, shifts, expenses, and operational reports.",
     fullDescription: "MyPlays / MatchPro is an operations management software for gaming and points-based businesses. It helps manage customers, check-ins, match points, ticket-outs, machines, shifts, expenses, and reports through a centralized role-based admin platform. Built using React.js, .NET Web APIs, and MySQL.",
     techStack: ["React.js", ".NET Web APIs", "MySQL", "Role-Based Access", "Analytics Dashboard", "REST API"],
@@ -569,7 +565,6 @@ export const projectsData: Project[] = [
     title: "Khyratna - ECommerce Application",
     subtitle: "Cross-Platform Shopping Experience for Modern Consumers",
     category: "Mobile Application",
-    role: "Cross-Platform eCommerce App Development",
     summary: "A reliable, intuitive mobile shopping platform offering carefully curated products to meet customers' daily needs with ease and efficiency.",
     fullDescription: "Khyratna is an ecommerce cross-platform Mobile Application designed for modern consumers. The platform delivers a reliable and intuitive shopping experience, offering carefully curated products to meet daily needs with ease and efficiency.",
     techStack: ["Flutter", "Firebase", "Payment Integration", "OTP Authentication", "GPS Tracking", "Push Notifications"],
@@ -618,7 +613,6 @@ export const projectsData: Project[] = [
     title: "Notary Management System",
     subtitle: "Secure, Centralized Legal Workflow Platform for Notaries and Legal Professionals",
     category: "Web Application",
-    role: "Full-Stack Development & System Architecture",
     summary: "A centralized Notary Software platform that replaces manual paperwork with secure record management, case workflows, reporting, and role-based access.",
     fullDescription: "Notary Management System is a complete digital solution for notaries, lawyers, and legal professionals. It manages legal documents, clients, agreements, financial records, cases, and reports through a secure, centralized workflow. Developed using React, Laravel, and MySQL.",
     techStack: ["React", "Laravel", "MySQL", "Role-Based Access", "Reporting", "REST API"],
@@ -668,7 +662,6 @@ export const projectsData: Project[] = [
     title: "ZeoChat - Social Media App",
     subtitle: "Cross-platform social discovery app for tourists, explorers, and local guides",
     category: "Mobile Application",
-    role: "",
     summary: "Zeochat provides a platform for tourists and explorers to virtually explore places through experience requests fulfilled by local guides.",
     fullDescription: "Zeochat is a cross-platform social media app developed for a seamless user experience. It provides a platform for tourists and explorers to explore places around the world virtually through experience requests fulfilled by local guides.",
     techStack: ["Flutter", "Firebase", "REST API", "Supabase", "NodeJS"],
@@ -697,7 +690,6 @@ export const projectsData: Project[] = [
     title: "Inventory Management System",
     subtitle: "Digital inventory tracking for sales, payments, and in-stock items",
     category: "Web Application",
-    role: "",
     summary: "An online system for managing digital inventory, daily sales, pending payments, and in-stock item details.",
     fullDescription: "Kingstone Inventory Management System is an online system that helps manage digital inventory to track daily sales, pending payments, and details of in-stock items. The system is developed using Laravel and MySQL.",
     techStack: ["PHP", "Laravel", "MySQL"],
@@ -726,7 +718,6 @@ export const projectsData: Project[] = [
     title: "Pure Water - POS System",
     subtitle: "Water-plant client and supply record management from anywhere",
     category: "Web Application",
-    role: "",
     summary: "Helps water-plant owners manage client and water-supply details with records available from anywhere, anytime.",
     fullDescription: "Water Plant Point of Sale helps water-plant owners manage their clients and water-supply details with records at their fingertips. The system can be accessed from anywhere, anytime and is developed using Laravel and MySQL.",
     techStack: ["PHP", "Laravel", "MySQL"],
@@ -755,7 +746,6 @@ export const projectsData: Project[] = [
     title: "Pest IQ Web & Mobile App",
     subtitle: "AI-powered pest monitoring for exterminators",
     category: "Web Application",
-    role: "",
     summary: "A smart pest-monitoring SaaS platform that helps exterminators automatically detect, count, and analyze insects using AI and mobile technology.",
     fullDescription: "PEST IQ is a smart pest monitoring SaaS platform that helps exterminators detect, count, and analyze insects automatically using artificial intelligence and mobile technology. The platform is developed with Flutter, MERN, Firebase, and MongoDB.",
     techStack: ["Flutter", "MERN", "Firebase", "MongoDB"],
@@ -774,7 +764,6 @@ export const projectsData: Project[] = [
     title: "POD Mobile App",
     subtitle: "On-demand transportation operations management",
     category: "Mobile Application",
-    role: "",
     summary: "A mobile app that streamlines transportation operations with one-click management for daily business activities from anywhere.",
     fullDescription: "POD Mobile App was developed for XIT Company to manage transportation businesses on demand. It helps streamline operations with one-click management, allowing transportation business owners to manage daily activities from anywhere, anytime. The app is available on Google Play Store.",
     techStack: ["React Native", ".NET", "C#", "SQL", "Firebase"],
@@ -806,7 +795,6 @@ export const projectsData: Project[] = [
     title: "AI Knowledge Assistant",
     subtitle: "AI-powered conversational assistant for searchable knowledge",
     category: "Web Application",
-    role: "",
     summary: "A desktop assistant designed to transform scraped web data and knowledge into an intelligent, searchable conversational experience.",
     fullDescription: "An AI-powered conversational assistant designed to transform scraped web data and knowledge into an intelligent, searchable conversational experience.",
     techStack: [".NET", "Google Gemini", "AI APIs"],
@@ -828,7 +816,6 @@ export const projectsData: Project[] = [
     title: "Attendance Management System",
     subtitle: "Remote employee attendance tracking using IP addresses",
     category: "Web Application",
-    role: "",
     summary: "A system for small organizations to track employee attendance and maintain essential employee records, including for remote work.",
     fullDescription: "Attendance Management System is designed for small-scale organizations to track employee attendance and maintain records with other essential details. It uses IP addresses to make tracking attendance for remotely working employees easier. The system is developed using PHP, Laravel, and MySQL.",
     techStack: ["PHP", "Laravel", "MySQL"],
@@ -858,7 +845,6 @@ export const projectsData: Project[] = [
     title: "Electronic Voting System",
     subtitle: "Secure, transparent, and efficient election management",
     category: "Web Application",
-    role: "",
     summary: "A modern system that simplifies organizational election management and makes voting easier, faster, and more reliable.",
     fullDescription: "Electronic Voting System transforms the way organizations manage elections with a secure, transparent, and efficient electronic voting system. The solution simplifies election management through modern technology, making voting processes easier, faster, and more reliable.",
     techStack: ["PHP", "MySQL"],
@@ -887,7 +873,6 @@ export const projectsData: Project[] = [
     title: "Bakery Management System",
     subtitle: "Organized bakery recipes, inventory, clients, suppliers, and production",
     category: "Web Application",
-    role: "",
     summary: "A single platform for bakeries to simplify daily operations and organize recipes, ingredients, clients, suppliers, dough, and production.",
     fullDescription: "Bakery Management System gives businesses one smart platform to simplify daily operations and manage recipes, ingredients, clients, suppliers, dough, and production while keeping everything organized.",
     techStack: ["PHP", "MySQL"],
@@ -915,7 +900,6 @@ export const projectsData: Project[] = [
     title: "HRMS",
     subtitle: "Centralized Human Resource Management System",
     category: "Web Application",
-    role: "",
     summary: "A centralized solution for managing employees, attendance, designations, leaves, salaries, company structure, training, and other essential HR processes.",
     fullDescription: "HRMS brings important human resources processes together in one centralized solution. It helps organizations manage employees, attendance, designations, leaves, salaries, company structure, training, nominations, reports, and secure role-based access from a single platform.",
     techStack: ["PHP", "Laravel", "MySQL"],
@@ -954,6 +938,40 @@ export const projectsData: Project[] = [
       { src: hrmsTrainingImage, alt: "HRMS training management" },
       { src: hrmsNominationsImage, alt: "HRMS nominations" },
       { src: hrmsLoginImage, alt: "HRMS sign-in screen" },
+    ],
+    mockupScreens: [],
+  },
+  {
+    id: "dubaijewellerysoftware",
+    title: "Business Management Software",
+    subtitle: "Centralized Human Resource Management System",
+    category: "Desktop Application",
+    summary: "A smart Barcode Management System built specifically for jewelry manufacturers and businesses to upgrade daily operations.",
+    fullDescription: "Transforming jewelry business operations with an advanced Barcode Management System designed specifically for jewelry manufacturers and businesses. Our solution simplifies jewelry inventory management, barcode generation, product tracking, and user management through smart technology, making business operations faster, easier, and more efficient.",
+    techStack: ["Winforms", "Dotnet", "SQL"],
+    keyFeatures: [
+      "Complete Jewelry Product Management",
+      "Advanced Barcode Generation",
+      "Barcode Scanning & Tracking",
+      "Jewelry Weight & Carat Management",
+      "Serial Number Management",
+      "User & Access Management",
+      "Secure & Reliable System",
+    ],
+    challenges: [],
+    solutions: [],
+    gradient: "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-600",
+    badge: "Business Management Platform",
+    platforms: ["desktop"],
+    rolesSupported: [],
+    visualImages: {
+      card: dubaiJewellerySoftwareCoverImage,
+      detail: dubaiJewellerySoftwareCoverImage,
+    },
+    galleryImages: [
+      { src: dubaiJewellerySoftwareLoginImage, alt: "Login Image" },
+      { src: dubaiJewellerySoftwareManagementDashboardImage, alt: "Management Dashboard" },
+      { src: dubaiJewellerySoftwareManufacturingDashboardImage, alt: "Manufacturing Dashboard" },
     ],
     mockupScreens: [],
   }

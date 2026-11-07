@@ -1,6 +1,6 @@
-import { Globe2 } from "lucide-react";
+import { Globe2, Monitor } from "lucide-react";
 
-export type ProjectPlatform = "appStore" | "googlePlay" | "webPortal";
+export type ProjectPlatform = "appStore" | "googlePlay" | "webPortal" | "desktop";
 
 const AppleIcon = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 384 512" aria-hidden="true" className={className} fill="currentColor">
@@ -21,6 +21,7 @@ const platformDetails: Record<ProjectPlatform, { label: string; className: strin
   appStore: { label: "App Store", className: "bg-slate-900 text-white" },
   googlePlay: { label: "Google Play", className: "bg-white text-slate-900 border border-slate-200" },
   webPortal: { label: "Web Portal", className: "bg-[#0f6cbd] text-white" },
+  desktop: { label: "Desktop", className: "bg-[#0f6cbd] text-white" },
 };
 
 interface PlatformBadgesProps {
@@ -43,6 +44,7 @@ export const PlatformBadges = ({ platforms, size = "default" }: PlatformBadgesPr
             {platform === "appStore" && <AppleIcon className={iconClasses} />}
             {platform === "googlePlay" && <GooglePlayIcon className={iconClasses} />}
             {platform === "webPortal" && <Globe2 className={iconClasses} aria-hidden="true" />}
+            {platform === "desktop" && <Monitor className={iconClasses} aria-hidden="true" />}
             <span>{detail.label}</span>
           </span>
         );

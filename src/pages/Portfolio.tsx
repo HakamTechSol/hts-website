@@ -14,6 +14,7 @@ const categories = [
   "All",
   "Web Application",
   "Mobile Application",
+  "Desktop Application",
 ];
 
 const normalize = (value: string) => value.normalize("NFKD").toLocaleLowerCase().trim();
@@ -28,9 +29,8 @@ const Portfolio: React.FC = () => {
     const matchesCategory = selectedCategory === "All" ||
       (selectedCategory === "Mobile Application" ? project.category === "Mobile Application" : project.category === selectedCategory);
     const searchableText = [
-      project.title, project.subtitle, project.category, project.client, project.role,
-      project.summary, project.fullDescription, ...project.techStack, ...project.keyFeatures,
-      ...project.challenges, ...project.solutions,
+      project.title, project.subtitle, project.category, project.summary, project.fullDescription, 
+      ...project.techStack, ...project.keyFeatures, ...project.challenges, ...project.solutions,
     ].join(" ");
     const matchesSearch = !normalizedQuery || normalize(searchableText).includes(normalizedQuery);
     return matchesCategory && matchesSearch;
